@@ -1,0 +1,6 @@
+{
+  "name": "MAKEDO",
+  "description": "Landing page de alta conversão para a MAKEDO, especialista em criação de sites e estruturas digitais de alta credibilidade.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
