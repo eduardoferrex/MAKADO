@@ -60,11 +60,18 @@ export default function Footer() {
           <div className="md:col-span-3 space-y-4 text-left md:text-right">
             <h4 className="text-white text-xs font-mono font-bold uppercase tracking-[0.2em] md:block">Segurança & Padrões</h4>
             <p className="text-[11px] text-zinc-500 leading-normal max-w-xs md:ml-auto">
-              Estruturas 100% responsivas em conformidade com as diretrizes do Google Core Web Vitals.
+              Estruturas 100% responsivas em conformidade com as diretrizes do Google Core Web Vitals e criptografia SSL de ponta a ponta.
             </p>
-            <div className="flex md:justify-end gap-2 pt-1 text-[9px] font-mono">
-              <span className="bg-zinc-950 px-2.5 py-1 rounded-lg border border-white/5 text-zinc-500">SSL SEGURO</span>
-              <span className="bg-zinc-950 px-2.5 py-1 rounded-lg border border-white/5 text-white font-bold">100% ATIVO</span>
+            <div className="flex md:justify-end flex-wrap gap-2 pt-1 text-[9px] font-mono">
+              <span className="bg-zinc-950 px-2.5 py-1 rounded-lg border border-white/5 text-zinc-500 flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                GOOGLE SSL SECURE
+              </span>
+              <span className="bg-zinc-950 px-2.5 py-1 rounded-lg border border-white/5 text-zinc-500 flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                GOOGLE SAFE BROWSING
+              </span>
+              <span className="bg-zinc-950 px-2.5 py-1 rounded-lg border border-white/5 text-white font-bold">100% SEGURO</span>
             </div>
           </div>
 
