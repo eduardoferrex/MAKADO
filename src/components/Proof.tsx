@@ -35,7 +35,7 @@ function Counter({ target, suffix = "", prefix = "", duration = 1.2 }: { target:
 export default function Proof() {
   const [activeTab, setActiveTab] = useState<"websites" | "sistemas" | "estruturas">("websites");
 
-  const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKEDO";
+  const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKADO";
 
   const tabsInfo = {
     websites: {
@@ -211,7 +211,7 @@ export default function Proof() {
                     <span className="w-2.5 h-2.5 rounded-full bg-zinc-800" />
                     <span className="w-2.5 h-2.5 rounded-full bg-zinc-800" />
                   </div>
-                  <span className="text-[8px] font-mono text-zinc-550 uppercase">makedo-preview.exe</span>
+                  <span className="text-[8px] font-mono text-zinc-550 uppercase">makado-preview.exe</span>
                 </div>
 
                 {/* Main Interactive visual body depending on active tab */}
@@ -275,7 +275,7 @@ export default function Proof() {
 
                 {/* Visual Footer of mockup */}
                 <div className="border-t border-white/[0.03] pt-3 text-right">
-                  <span className="text-[8px] font-mono text-zinc-650">SISTEMA INTEGRADO MAKEDO SECURITY</span>
+                  <span className="text-[8px] font-mono text-zinc-650">SISTEMA INTEGRADO MAKADO SECURITY</span>
                 </div>
               </div>
 
@@ -290,11 +290,11 @@ export default function Proof() {
           <div className="z-10 text-left">
             <h4 className="text-xl md:text-2xl font-display font-black text-white mb-2">Quer ver exemplos reais em produção?</h4>
             <p className="text-zinc-400 text-xs md:text-sm max-w-xl leading-relaxed">
-              Fale com nosso especialista. Nós te enviamos links de sites e sistemas reais criados e hospedados pela MAKEDO, para você comprovar a velocidade e o design na prática.
+              Fale com nosso especialista. Nós te enviamos links de sites e sistemas reais criados e hospedados pela MAKADO, para você comprovar a velocidade e o design na prática.
             </p>
           </div>
           <a
-            href="https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20ver%20exemplos%20de%20sites%20e%20sistemas%20criados%20pela%20MAKEDO"
+            href="https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20ver%20exemplos%20de%20sites%20e%20sistemas%20criados%20pela%20MAKADO"
             target="_blank"
             rel="noopener noreferrer"
             className="z-10 shrink-0 px-8 py-4 rounded-full bg-white text-black font-mono font-bold text-xs uppercase tracking-widest hover:bg-zinc-200 hover:scale-103 transition-all"

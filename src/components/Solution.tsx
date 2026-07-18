@@ -3,7 +3,7 @@ import { Laptop, Zap, Target, ShieldCheck, ArrowRight, Sparkles, Code, Cpu, Chec
 import { motion } from "motion/react";
 
 export default function Solution() {
-  const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKEDO";
+  const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKADO";
 
   return (
     <section id="solution-section" className="py-24 md:py-32 bg-black text-white relative border-t border-white/[0.03] overflow-hidden">
@@ -192,7 +192,7 @@ export default function Solution() {
 
             {/* Interactive simulated chat response box */}
             <div className="absolute bottom-6 right-6 hidden md:flex flex-col gap-1.5 bg-[#0c0c0e] border border-white/5 p-3.5 rounded-2xl max-w-[200px]">
-              <div className="text-[8px] font-mono text-zinc-550">SUPORTE MAKEDO</div>
+              <div className="text-[8px] font-mono text-zinc-550">SUPORTE MAKADO</div>
               <p className="text-[10px] text-white leading-tight font-medium">"Sua alteração de performance foi concluída em 8 minutos!"</p>
             </div>
 

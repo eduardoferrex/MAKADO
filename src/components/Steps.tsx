@@ -132,7 +132,7 @@ export default function Steps() {
               Dúvidas adicionais? Fale com nosso suporte diretamente no WhatsApp
             </span>
             <a
-              href="https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKEDO"
+              href="https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKADO"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white font-bold hover:underline flex items-center gap-1"

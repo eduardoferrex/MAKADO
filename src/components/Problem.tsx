@@ -143,7 +143,7 @@ export default function Problem() {
             </div>
           </motion.div>
 
-          {/* Realidade de Elite (Makedo Architecture) */}
+          {/* Realidade de Elite (MAKADO Architecture) */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -161,7 +161,7 @@ export default function Problem() {
                     <TrendingUp className="w-4 h-4 text-black" />
                   </div>
                   <div>
-                    <h3 className="text-base font-display font-black text-white">Arquitetura MAKEDO</h3>
+                    <h3 className="text-base font-display font-black text-white">Arquitetura MAKADO</h3>
                     <p className="text-[9px] font-mono tracking-widest text-white/70 uppercase">PRODUÇÃO DE ELITE</p>
                   </div>
                 </div>

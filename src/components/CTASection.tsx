@@ -12,7 +12,7 @@ export default function CTASection() {
     "Cronograma e plano visual inicial para sua futura estrutura digital"
   ];
 
-  const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKEDO";
+  const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKADO";
 
   const handleToggle = (index: number) => {
     const updated = [...checkedItems];

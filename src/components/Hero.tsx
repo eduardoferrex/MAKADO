@@ -8,7 +8,7 @@ interface HeroProps {
 }
 
 export default function Hero({ onLearnMoreClick }: HeroProps) {
-  const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKEDO";
+  const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKADO";
 
   // Coordinates for the interactive premium Card Hover effect
   const x = useMotionValue(0);
@@ -64,14 +64,9 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
           <div className="p-1.5 bg-zinc-950 border border-zinc-900 rounded-xl group-hover:border-zinc-700 transition-all duration-300">
             <OfficialLogo size={28} animate={true} />
           </div>
-          <div className="flex flex-col">
-            <span className="font-display font-black text-lg md:text-xl tracking-widest text-white leading-none">
-              MAKEDO
-            </span>
-            <span className="text-[9px] font-mono tracking-[0.25em] text-zinc-500 uppercase">
-              STUDIO DIGITAL
-            </span>
-          </div>
+          <span className="font-display font-black text-lg md:text-xl tracking-widest text-white leading-none">
+            MAKADO
+          </span>
         </motion.div>
 
         <motion.div
@@ -87,19 +82,8 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
             className="hidden md:inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-zinc-400 hover:text-white transition-colors"
           >
             <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-            Suporte Directo
+            Suporte Direto
           </a>
-          
-          <motion.a
-            href={waLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="relative overflow-hidden px-6 py-2.5 rounded-full bg-white text-black text-xs font-mono font-bold tracking-wider uppercase transition-all shadow-[0_5px_15px_rgba(255,255,255,0.1)] hover:bg-zinc-200"
-          >
-            Falar com Especialista
-          </motion.a>
         </motion.div>
       </header>
 
@@ -258,7 +242,7 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
 
             {/* Card Footer details */}
             <div className="text-center" style={{ transform: "translateZ(30px)" }}>
-              <p className="text-[10px] font-mono text-zinc-400 font-bold tracking-[0.3em] uppercase">MAKEDO ACTIVE</p>
+              <p className="text-[10px] font-mono text-zinc-400 font-bold tracking-[0.3em] uppercase">MAKADO ACTIVE</p>
               <p className="text-[9px] text-zinc-600 font-mono mt-1.5">Arraste a logo ou passe o mouse para orbitar</p>
             </div>
           </motion.div>

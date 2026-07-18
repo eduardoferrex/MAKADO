@@ -18,7 +18,7 @@ export default function App() {
   };
 
   return (
-    <div id="makedo-app-root" className="min-h-screen bg-[#08080A] text-white selection:bg-[#B5FF00] selection:text-black antialiased font-sans">
+    <div id="makado-app-root" className="min-h-screen bg-[#08080A] text-white selection:bg-[#B5FF00] selection:text-black antialiased font-sans">
       {/* 1. Hero Landing & Header */}
       <Hero onLearnMoreClick={handleScrollToProblem} />
 
