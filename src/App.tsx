@@ -7,6 +7,7 @@ import Steps from "./components/Steps";
 import CTASection from "./components/CTASection";
 import Footer from "./components/Footer";
 import FloatingWA from "./components/FloatingWA";
+import CookieConsent from "./components/CookieConsent";
 
 export default function App() {
   // Smooth scroll handler for anchor navigation
@@ -42,6 +43,9 @@ export default function App() {
 
       {/* Persistent Flotating Support Trigger */}
       <FloatingWA />
+
+      {/* Security Privacy Consent banner */}
+      <CookieConsent />
     </div>
   );
 }
