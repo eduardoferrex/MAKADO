@@ -1,51 +1,46 @@
 import React from "react";
 import Hero from "./components/Hero";
-import Problem from "./components/Problem";
-import Solution from "./components/Solution";
-import Proof from "./components/Proof";
-import Steps from "./components/Steps";
-import CTASection from "./components/CTASection";
+import WhatWeDo from "./components/WhatWeDo";
+import WhyItMatters from "./components/WhyItMatters";
+import FreeMeeting from "./components/FreeMeeting";
+import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
 import FloatingWA from "./components/FloatingWA";
-import CookieConsent from "./components/CookieConsent";
 
 export default function App() {
-  // Smooth scroll handler for anchor navigation
-  const handleScrollToProblem = () => {
-    const section = document.getElementById("problem-section");
+  // Smooth scroll handler to scroll past the hero section
+  const handleScrollToWhatWeDo = () => {
+    const section = document.getElementById("what-we-do-section");
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
   return (
-    <div id="makado-app-root" className="min-h-screen bg-[#08080A] text-white selection:bg-[#B5FF00] selection:text-black antialiased font-sans">
-      {/* 1. Hero Landing & Header */}
-      <Hero onLearnMoreClick={handleScrollToProblem} />
+    <div 
+      id="makedo-app-root" 
+      className="min-h-screen bg-[#08080a] text-white selection:bg-[#ffffff] selection:text-black antialiased font-sans"
+    >
+      {/* 1. Abertura (Hero) */}
+      <Hero onLearnMoreClick={handleScrollToWhatWeDo} />
 
-      {/* 2. Pain Points & Contrast */}
-      <Problem />
+      {/* 2. O que a MAKEDO faz */}
+      <WhatWeDo />
 
-      {/* 3. Solutions Grid (What we do) */}
-      <Solution />
+      {/* 3. Por que isso importa */}
+      <WhyItMatters />
 
-      {/* 4. Results & Portfolio Simulator */}
-      <Proof />
+      {/* 4. Como funciona a reunião gratuita */}
+      <FreeMeeting />
 
-      {/* 5. Process Roadmap (Reunião Gratuita) */}
-      <Steps />
+      {/* 5. Chamada final */}
+      <FinalCTA />
 
-      {/* 6. High impact Call To Action */}
-      <CTASection />
-
-      {/* 7. Footer credentials */}
+      {/* 6. Rodapé */}
       <Footer />
 
-      {/* Persistent Flotating Support Trigger */}
+      {/* Persistent Floating Support Trigger */}
       <FloatingWA />
-
-      {/* Security Privacy Consent banner */}
-      <CookieConsent />
     </div>
   );
 }

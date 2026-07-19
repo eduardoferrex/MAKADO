@@ -29,7 +29,7 @@ export default function FloatingWA() {
     };
   }, []);
 
-  const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKADO";
+  const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKEDO";
 
   return (
     <div id="floating-whatsapp-container" className="fixed bottom-6 right-6 z-50 flex flex-col items-end pointer-events-none">

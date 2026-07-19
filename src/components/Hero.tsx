@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { ArrowRight, MessageSquare, ShieldCheck, Sparkles, Zap, Laptop, Terminal, Activity } from "lucide-react";
-import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
+import React from "react";
+import { ArrowRight, ArrowDown } from "lucide-react";
+import { motion } from "motion/react";
 import OfficialLogo from "./OfficialLogo";
 
 interface HeroProps {
@@ -8,288 +8,213 @@ interface HeroProps {
 }
 
 export default function Hero({ onLearnMoreClick }: HeroProps) {
-  const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKADO";
+  const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKEDO";
 
-  // Coordinates for the interactive premium Card Hover effect
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
+  // Headline words for staggered reveal effect
+  const headlineWords = "Não é apenas um site. É a imagem da sua empresa.".split(" ");
 
-  const rotateX = useSpring(useTransform(y, [-200, 200], [15, -15]), { damping: 25, stiffness: 150 });
-  const rotateY = useSpring(useTransform(x, [-200, 200], [-15, 15]), { damping: 25, stiffness: 150 });
-
-  function handleMouse(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
-    const rect = event.currentTarget.getBoundingClientRect();
-    const width = rect.width;
-    const height = rect.height;
-    const mouseX = event.clientX - rect.left - width / 2;
-    const mouseY = event.clientY - rect.top - height / 2;
-    x.set(mouseX);
-    y.set(mouseY);
-  }
-
-  function handleMouseLeave() {
-    x.set(0);
-    y.set(0);
-  }
-
-  // Words for the staggered headline animation
-  const headlineWords = "A imagem profissional que sua marca exige.".split(" ");
+  // Marquee terms for autorial styling
+  const tickerItems = [
+    "CÓDIGO INTEGRAL", "DESIGN EXCLUSIVO", "PERFORMANCE MÁXIMA", "EXPERIÊNCIA EXCLUSIVA", 
+    "ESTRUTURAS HIGH-END", "CONVERSÃO MAXIMIZADA", "CORE WEB VITALS", "ARQUITETURA DE ELITE"
+  ];
 
   return (
-    <section id="hero-section" className="relative min-h-screen bg-black text-white overflow-hidden flex flex-col justify-between pt-6 pb-12 md:py-16">
-      
-      {/* Premium background grid lines (extremely thin and subtle) */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#121214_1px,transparent_1px),linear-gradient(to_bottom,#121214_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_70%,transparent_100%)] pointer-events-none" />
+    <section 
+      id="hero-section" 
+      className="relative min-h-screen bg-black text-white overflow-hidden flex flex-col justify-between pt-6 pb-12"
+    >
+      {/* Background ultra-thin lines layout grid (for a structural designer feel) */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#111113_1px,transparent_1px),linear-gradient(to_bottom,#111113_1px,transparent_1px)] bg-[size:6rem_6rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_80%,transparent_100%)] pointer-events-none animate-pulse duration-[8000ms]" />
 
-      {/* Floating elegant particle glows (very high-end and minimalist) */}
-      <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-white/[0.02] blur-[150px] pointer-events-none" />
-      <div className="absolute bottom-[10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-zinc-900/30 blur-[180px] pointer-events-none" />
+      {/* Background radial soft light points */}
+      <div className="absolute top-[30%] left-[25%] -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/[0.012] rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[20%] right-[10%] w-[500px] h-[500px] bg-white/[0.008] rounded-full blur-[150px] pointer-events-none" />
 
-      {/* Exquisite animated glowing spark accents */}
-      <div className="absolute inset-0 pointer-events-none opacity-10">
-        <div className="absolute top-[30%] left-[25%] w-1.5 h-1.5 rounded-full bg-white animate-ping" />
-        <div className="absolute top-[65%] left-[10%] w-1 h-1 rounded-full bg-white/50" />
-        <div className="absolute top-[45%] right-[20%] w-1 h-1 rounded-full bg-white/70 animate-pulse" />
+      {/* Decorative vertical running lines with draw transitions */}
+      <motion.div 
+        initial={{ scaleY: 0 }}
+        animate={{ scaleY: 1 }}
+        transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+        className="absolute top-0 left-[10%] w-[1px] h-full bg-white/[0.025] origin-top pointer-events-none hidden md:block" 
+      />
+      <motion.div 
+        initial={{ scaleY: 0 }}
+        animate={{ scaleY: 1 }}
+        transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+        className="absolute top-0 left-[40%] w-[1px] h-full bg-white/[0.025] origin-top pointer-events-none hidden md:block" 
+      />
+      <motion.div 
+        initial={{ scaleY: 0 }}
+        animate={{ scaleY: 1 }}
+        transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+        className="absolute top-0 right-[20%] w-[1px] h-full bg-white/[0.025] origin-top pointer-events-none hidden md:block" 
+      />
+
+      {/* Abstract Animated Floating Wireframe/Design Element (Upper Right Corner) */}
+      <div className="absolute top-[18%] right-[8%] w-48 h-48 pointer-events-none hidden xl:block select-none opacity-40">
+        <motion.svg
+          viewBox="0 0 100 100"
+          className="w-full h-full text-zinc-800"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+        >
+          {/* Wireframe geometric layout representing code & structures */}
+          <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="3,3" />
+          <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" strokeWidth="0.5" />
+          <line x1="50" y1="5" x2="50" y2="95" stroke="currentColor" strokeWidth="0.5" />
+          <line x1="5" y1="50" x2="95" y2="50" stroke="currentColor" strokeWidth="0.5" />
+          <rect x="25" y="25" width="50" height="50" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="1,1" />
+          <polygon points="50,5 95,50 50,95 5,50" fill="none" stroke="currentColor" strokeWidth="0.5" />
+        </motion.svg>
       </div>
 
       {/* Navigation Header */}
-      <header id="main-header" className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center py-5 border-b border-white/[0.03] backdrop-blur-md mb-8">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex items-center gap-3.5 group cursor-pointer"
-        >
-          {/* Animated Official Logo in Header */}
-          <div className="p-1.5 bg-zinc-950 border border-zinc-900 rounded-xl group-hover:border-zinc-700 transition-all duration-300">
-            <OfficialLogo size={28} animate={true} />
+      <header id="main-header" className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center py-6 border-b border-white/[0.02]">
+        <div className="flex items-center gap-3">
+          <div className="p-1 bg-zinc-950 border border-white/5 rounded-lg">
+            <OfficialLogo size={24} animate={true} />
           </div>
-          <span className="font-display font-black text-lg md:text-xl tracking-widest text-white leading-none">
-            MAKADO
+          <span className="font-display font-black text-base md:text-lg tracking-widest text-white leading-none">
+            MAKEDO
           </span>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-          className="flex items-center gap-5"
-        >
-          <a
-            href={waLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-zinc-400 hover:text-white transition-colors"
-          >
-            <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-            Suporte Direto
-          </a>
-        </motion.div>
-      </header>
-
-      {/* Main Hero Body */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center gap-16 md:gap-24 my-auto">
-        
-        {/* Left Side: Elegant typography and CTAs */}
-        <div className="flex-1 text-left flex flex-col items-start max-w-xl lg:max-w-none">
-          {/* Top Premium Badge Tag */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-zinc-950/80 border border-zinc-900 mb-8 backdrop-blur-sm shadow-[0_4px_15px_rgba(0,0,0,0.5)]"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
-            </span>
-            <span className="text-[10px] md:text-xs font-mono text-zinc-300 uppercase tracking-widest font-black">
-              WEBSITES | SISTEMAS | ESTRUTURAS
-            </span>
-          </motion.div>
-
-          {/* Luxury Headings with staggered word animation */}
-          <h1 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white tracking-tighter leading-[1.05] mb-6">
-            {headlineWords.map((word, idx) => (
-              <motion.span
-                key={idx}
-                className="inline-block mr-3"
-                initial={{ opacity: 0, y: 25 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.8,
-                  ease: [0.16, 1, 0.3, 1], // Custom cubic-bezier for high-end look
-                  delay: 0.05 * idx,
-                }}
-              >
-                {word}
-              </motion.span>
-            ))}
-          </h1>
-
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-            className="text-zinc-400 text-sm md:text-base font-normal leading-relaxed mb-10 max-w-lg"
-          >
-            Nós não fazemos apenas páginas. Desenvolvemos <span className="text-white font-semibold">Websites de altíssimo nível</span>, <span className="text-white font-semibold">Sistemas modernos sob medida</span> e <span className="text-white font-semibold">Estruturas digitais completas</span> que transformam cliques em lucros e posicionam sua marca no topo.
-          </motion.p>
-
-          {/* Elegant CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto"
-          >
-            <motion.a
-              id="hero-cta-primary"
-              href={waLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-              className="px-8 py-4 rounded-full bg-white text-black font-mono font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2.5 cursor-pointer shadow-[0_10px_25px_rgba(255,255,255,0.08)] hover:bg-zinc-200 transition-all duration-300 group"
-            >
-              Iniciar Meu Projeto Grátis
-              <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1.5 transition-transform duration-300" />
-            </motion.a>
-
-            <motion.button
-              id="hero-cta-secondary"
-              onClick={onLearnMoreClick}
-              whileHover={{ scale: 1.02, backgroundColor: "rgba(255, 255, 255, 0.04)" }}
-              whileTap={{ scale: 0.98 }}
-              className="px-8 py-4 rounded-full bg-zinc-950 border border-zinc-900 text-zinc-300 font-mono text-xs uppercase tracking-widest transition-all cursor-pointer flex items-center justify-center gap-1.5"
-            >
-              Conhecer Mais
-            </motion.button>
-          </motion.div>
-
-          {/* Thin Micro Metadata Row */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7, duration: 1 }}
-            className="grid grid-cols-2 gap-6 mt-12 border-t border-white/[0.04] pt-6 w-full max-w-md"
-          >
-            <div className="flex items-center gap-2 text-zinc-500">
-              <Zap className="w-3.5 h-3.5 text-white" />
-              <span className="text-[10px] font-mono tracking-widest uppercase">Desempenho Extremo</span>
-            </div>
-            <div className="flex items-center gap-2 text-zinc-500">
-              <ShieldCheck className="w-3.5 h-3.5 text-white" />
-              <span className="text-[10px] font-mono tracking-widest uppercase">Código Autoral</span>
-            </div>
-          </motion.div>
         </div>
 
-        {/* Right Side: Magnificent Interactive 3D Card Showcase */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-          className="flex-1 w-full max-w-lg lg:max-w-none flex items-center justify-center relative py-8"
+        <a
+          href={waLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 hover:text-white transition-all group"
         >
-          {/* Backing Ambient concentric rings */}
-          <div className="absolute w-[320px] h-[320px] rounded-full border border-white/[0.02] flex items-center justify-center animate-[spin_50s_linear_infinite]" />
-          <div className="absolute w-[440px] h-[440px] rounded-full border border-dashed border-white/[0.015] flex items-center justify-center animate-[spin_70s_linear_infinite_reverse]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-white group-hover:bg-emerald-400 animate-ping transition-colors" />
+          Fale Conosco
+        </a>
+      </header>
 
-          {/* Interactive 3D Rotational Canvas */}
-          <motion.div
-            style={{
-              rotateX: rotateX,
-              rotateY: rotateY,
-              transformStyle: "preserve-3d",
-            }}
-            onMouseMove={handleMouse}
-            onMouseLeave={handleMouseLeave}
-            className="relative w-full max-w-[340px] p-8 md:p-10 bg-[#09090b] border border-white/[0.06] rounded-3xl shadow-[0_30px_70px_rgba(0,0,0,0.9)] hover:border-white/[0.12] transition-colors duration-500 cursor-grab active:cursor-grabbing select-none overflow-hidden"
-          >
-            {/* Ambient reflective glow overlay inside the card */}
-            <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-            <div className="absolute -top-12 -left-12 w-32 h-32 bg-white/[0.02] rounded-full blur-2xl pointer-events-none" />
-
-            {/* Futuristic corner frame lines */}
-            <div className="absolute top-4 left-4 w-3.5 h-3.5 border-t border-l border-white/20" />
-            <div className="absolute top-4 right-4 w-3.5 h-3.5 border-t border-r border-white/20" />
-            <div className="absolute bottom-4 left-4 w-3.5 h-3.5 border-b border-l border-white/20" />
-            <div className="absolute bottom-4 right-4 w-3.5 h-3.5 border-b border-r border-white/20" />
-
-            <div className="absolute top-5 left-1/2 -translate-x-1/2 flex items-center gap-1.5 bg-zinc-900/80 border border-zinc-800/80 px-3 py-1 rounded-full">
-              <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-              <span className="text-[8px] font-mono font-bold tracking-widest text-zinc-400 uppercase">IDENTIDADE DIGITAL</span>
+      {/* Main Autorial Asymmetric Body */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 my-auto pt-12 md:pt-20">
+        
+        {/* Layout containing huge expressive typography as visual element */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          {/* Column for massive text and brand elements */}
+          <div className="lg:col-span-8 space-y-6">
+            
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-950 border border-zinc-900">
+              <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-[0.28em]">
+                WEBSITES | SISTEMAS | ESTRUTURAS
+              </span>
             </div>
 
-            {/* Massive Floating Official Logo representation with floating bounce */}
-            <div className="my-10 py-6 flex flex-col items-center justify-center" style={{ transform: "translateZ(50px)" }}>
-              <motion.div
-                animate={{
-                  y: [0, -10, 0],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="drop-shadow-[0_0_40px_rgba(255,255,255,0.18)] hover:drop-shadow-[0_0_55px_rgba(255,255,255,0.3)] transition-all"
+            {/* Giant display title block with word staggered entry */}
+            <h1 className="text-4xl sm:text-6xl lg:text-8xl font-display font-light text-white tracking-tighter leading-[0.95]">
+              {headlineWords.map((word, idx) => (
+                <motion.span
+                  key={idx}
+                  className={`inline-block mr-3 ${word.includes("imagem") || word.includes("empresa") ? "font-extrabold text-white text-glow-white hover:scale-105 transition-transform cursor-default" : ""}`}
+                  initial={{ opacity: 0, y: 35 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.9,
+                    ease: [0.16, 1, 0.3, 1],
+                    delay: 0.05 * idx,
+                  }}
+                >
+                  {word}
+                </motion.span>
+              ))}
+            </h1>
+
+          </div>
+
+          {/* Asymmetric offset block: description and CTAs */}
+          <div className="lg:col-span-4 lg:pt-20 space-y-8 flex flex-col justify-end">
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+              className="text-zinc-400 text-sm md:text-base leading-relaxed font-light border-l border-white/10 pl-6"
+            >
+              Criação de soluções digitais de alto impacto para marcas que exigem excelência. Construímos estruturas que geram credibilidade imediata e potencializam suas vendas diariamente.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+              className="pt-4"
+            >
+              <a
+                id="hero-cta-primary"
+                href={waLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative overflow-hidden inline-flex items-center gap-3.5 px-6 py-4 rounded-xl bg-white text-black font-mono font-bold text-xs uppercase tracking-wider hover:bg-zinc-200 transition-all cursor-pointer shadow-[0_15px_30px_rgba(255,255,255,0.04)]"
               >
-                <OfficialLogo size={180} animate={true} />
-              </motion.div>
-            </div>
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-black/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                <span>Agendar Reunião Gratuita</span>
+                <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1.5 transition-transform" />
+              </a>
+            </motion.div>
 
-            {/* Card Footer details */}
-            <div className="text-center" style={{ transform: "translateZ(30px)" }}>
-              <p className="text-[10px] font-mono text-zinc-400 font-bold tracking-[0.3em] uppercase">MAKADO ACTIVE</p>
-              <p className="text-[9px] text-zinc-600 font-mono mt-1.5">Arraste a logo ou passe o mouse para orbitar</p>
-            </div>
-          </motion.div>
+          </div>
 
-          {/* Luxury Micro status badges floating */}
-          <motion.div
-            animate={{ y: [0, -5, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
-            className="absolute -top-3 -right-2 bg-zinc-950/90 border border-white/[0.04] rounded-2xl p-3 shadow-2xl flex items-center gap-2.5 backdrop-blur-sm"
-          >
-            <div className="w-6 h-6 rounded-lg bg-white/5 flex items-center justify-center">
-              <Terminal className="w-3.5 h-3.5 text-white" />
+        </div>
+
+        {/* Endless Horizontal Sliding Ticker (The visual signature of high-end design agencies) */}
+        <div className="w-full overflow-hidden border-t border-b border-white/[0.03] py-4 my-10 relative">
+          <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
+          
+          <div className="flex whitespace-nowrap gap-12 animate-marquee text-[10px] font-mono tracking-[0.25em] text-zinc-550 uppercase">
+            {/* First sequence of ticker items */}
+            {tickerItems.map((item, i) => (
+              <span key={`ticker-1-${i}`} className="flex items-center gap-3">
+                <span>{item}</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-zinc-700" />
+              </span>
+            ))}
+            {/* Second identical sequence of ticker items for seamless loop */}
+            {tickerItems.map((item, i) => (
+              <span key={`ticker-2-${i}`} className="flex items-center gap-3">
+                <span>{item}</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-zinc-700" />
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Unique Signature Decorative Element (Autorial Brand Stamp) */}
+        <div className="mt-8 border-t border-white/[0.04] pt-8 flex flex-col md:flex-row items-start justify-between gap-6 text-[11px] font-mono text-zinc-500">
+          <div className="flex gap-8">
+            <div>
+              <span className="text-zinc-600 block mb-1">DESIGN CODE</span>
+              <span className="text-white">EDITION 2026</span>
             </div>
             <div>
-              <p className="text-[8px] text-zinc-500 font-mono uppercase tracking-wider">CÓDIGO DE ELITE</p>
-              <p className="text-[10px] font-extrabold text-white">Sistemas sob medida</p>
+              <span className="text-zinc-600 block mb-1">PROVA SOCIAL</span>
+              <span className="text-zinc-400">QUALIDADE ASSEGURADA</span>
             </div>
-          </motion.div>
-
-          <motion.div
-            animate={{ y: [0, 5, 0] }}
-            transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-            className="absolute bottom-2 -left-6 bg-zinc-950/90 border border-white/[0.04] rounded-2xl p-3 shadow-2xl flex items-center gap-2.5 backdrop-blur-sm"
-          >
-            <div className="w-6 h-6 rounded-lg bg-white/5 flex items-center justify-center">
-              <Activity className="w-3.5 h-3.5 text-white animate-pulse" />
-            </div>
-            <div>
-              <p className="text-[8px] text-zinc-500 font-mono uppercase tracking-wider">PERFORMANCE</p>
-              <p className="text-[10px] font-extrabold text-white">Velocidade Extrema</p>
-            </div>
-          </motion.div>
-        </motion.div>
+          </div>
+          <div className="max-w-xs font-light text-zinc-600 leading-normal">
+            *Desenvolvido em código-fonte limpo, livre de plataformas automatizadas de IA ou templates prontos.
+          </div>
+        </div>
 
       </div>
 
-      {/* Discover Bottom Button */}
-      <div className="w-full text-center mt-8 mb-2 relative z-10">
+      {/* Bounce bottom indicator */}
+      <div className="w-full text-center mt-8">
         <button
           onClick={onLearnMoreClick}
-          className="text-xs font-mono text-zinc-500 hover:text-zinc-200 transition-colors flex flex-col items-center gap-2 mx-auto animate-bounce cursor-pointer"
+          className="text-[10px] font-mono text-zinc-600 hover:text-white transition-colors inline-flex items-center gap-2 uppercase tracking-widest cursor-pointer animate-pulse"
         >
-          <span>Descobrir como funciona</span>
-          <span className="text-white">↓</span>
+          <span>Role para Explorar</span>
+          <ArrowDown className="w-3.5 h-3.5" />
         </button>
       </div>
+
     </section>
   );
 }
-
