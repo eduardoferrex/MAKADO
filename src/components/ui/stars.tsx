@@ -33,14 +33,8 @@ export function StarsBackground({
     let stars: Star[] = [];
 
     const resizeCanvas = () => {
-      const parent = canvas.parentElement;
-      if (parent) {
-        canvas.width = parent.clientWidth;
-        canvas.height = parent.clientHeight;
-      } else {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      }
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
       initStars();
     };
 
@@ -113,7 +107,7 @@ export function StarsBackground({
     <div className={`relative overflow-hidden ${className}`}>
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 pointer-events-none w-full h-full block z-0"
+        className="fixed inset-0 pointer-events-none w-full h-full block z-0"
         style={{ background: "transparent" }}
       />
       <div className="relative z-10 w-full h-full">
