@@ -4,7 +4,7 @@ import OfficialLogo from "./OfficialLogo";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKEDO";
+  const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKADO";
 
   return (
     <footer id="main-footer" className="bg-[#08080a] text-zinc-500 py-16 md:py-20 border-t border-white/[0.03] relative">
@@ -19,7 +19,7 @@ export default function Footer() {
                 <OfficialLogo size={20} animate={false} />
               </div>
               <span className="font-display font-black text-lg tracking-wider text-white uppercase">
-                MAKEDO
+                MAKADO
               </span>
             </div>
             <p className="text-xs md:text-sm text-zinc-400 max-w-sm leading-relaxed font-light">
@@ -55,7 +55,7 @@ export default function Footer() {
 
         {/* Brand name, contact, year — nothing more */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 text-[11px] md:text-xs text-zinc-600">
-          <p>© {currentYear} MAKEDO. Todos os direitos reservados.</p>
+          <p>© {currentYear} MAKADO. Todos os direitos reservados.</p>
           <p className="font-mono text-[10px] tracking-widest text-zinc-700">WEBSITES | SISTEMAS | ESTRUTURAS</p>
         </div>
 

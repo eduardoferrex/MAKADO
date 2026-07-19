@@ -4,7 +4,7 @@ import { ArrowUpRight, Monitor, Layout, Cpu } from "lucide-react";
 
 export default function WhatWeDo() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKEDO";
+  const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKADO";
 
   const containerVariants = {
     hidden: {},
@@ -100,7 +100,7 @@ export default function WhatWeDo() {
                         <span className="w-1.5 h-1.5 rounded-full bg-yellow-500/60" />
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/60" />
                       </div>
-                      <span className="text-[8px] text-zinc-600">makedo.agency</span>
+                      <span className="text-[8px] text-zinc-600">makado.agency</span>
                     </div>
                     <div className="space-y-1.5">
                       <div className="h-2 bg-white/10 rounded w-2/3" />

@@ -8,7 +8,7 @@ interface HeroProps {
 }
 
 export default function Hero({ onLearnMoreClick }: HeroProps) {
-  const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKEDO";
+  const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKADO";
 
   // Headline words for staggered reveal effect
   const headlineWords = "Não é apenas um site. É a imagem da sua empresa.".split(" ");
@@ -100,7 +100,7 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
             <OfficialLogo size={24} animate={true} />
           </div>
           <span className="font-display font-black text-base md:text-lg tracking-widest text-white leading-none">
-            MAKEDO
+            MAKADO
           </span>
         </div>
 

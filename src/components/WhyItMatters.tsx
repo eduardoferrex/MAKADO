@@ -54,7 +54,7 @@ export default function WhyItMatters() {
                   <span className="text-xs font-mono uppercase tracking-wider">A Solução Rápida</span>
                 </div>
                 <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light">
-                  Credibilidade na internet não é opcional; é o que define o seu faturamento. A MAKEDO reconstrói seu posicionamento com layouts autorais e extremamente rápidos, convertendo cliques frios em conversas ativas no seu WhatsApp.
+                  Credibilidade na internet não é opcional; é o que define o seu faturamento. A MAKADO reconstrói seu posicionamento com layouts autorais e extremamente rápidos, convertendo cliques frios em conversas ativas no seu WhatsApp.
                 </p>
               </div>
 
@@ -119,14 +119,14 @@ export default function WhyItMatters() {
                   </div>
                 </div>
 
-                {/* White/Glowing Card (The MAKEDO Signature) */}
+                {/* White/Glowing Card (The MAKADO Signature) */}
                 <div className="bg-zinc-950/80 border border-white/10 p-6 md:p-8 rounded-2xl relative overflow-hidden group hover:border-white/20 transition-all duration-300 shadow-[0_15px_40px_rgba(255,255,255,0.015)] md:-translate-y-3">
                   {/* Glowing background spot */}
                   <div className="absolute -top-12 -right-12 w-24 h-24 rounded-full bg-white/[0.03] blur-xl pointer-events-none group-hover:scale-150 transition-transform duration-500" />
                   
                   <span className="text-[9px] font-mono text-white uppercase tracking-widest block mb-4 flex items-center gap-2">
                     <Zap className="w-3 h-3 text-white animate-pulse" />
-                    <span>Estrutura de Elite MAKEDO</span>
+                    <span>Estrutura de Elite MAKADO</span>
                   </span>
 
                   <div className="space-y-6">
