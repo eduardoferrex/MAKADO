@@ -40,7 +40,7 @@ export default function EntranceLoader({ onComplete }: EntranceLoaderProps) {
       className="fixed inset-0 z-[9999] bg-[#050507] flex flex-col items-center justify-center px-6"
     >
       {/* Background soft ambient glowing circles */}
-      <div className="absolute top-[40%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-cyan-500/[0.04] rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-[40%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-zinc-500/[0.04] rounded-full blur-[100px] pointer-events-none" />
       
       <div className="text-center space-y-6 max-w-sm w-full relative z-10">
         
@@ -51,7 +51,7 @@ export default function EntranceLoader({ onComplete }: EntranceLoaderProps) {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="flex justify-center mb-2"
         >
-          <div className="w-14 h-14 rounded-2xl bg-cyan-950/30 border border-cyan-500/30 flex items-center justify-center shadow-[0_0_30px_rgba(6,182,212,0.15)]">
+          <div className="w-14 h-14 rounded-2xl bg-zinc-900/40 border border-zinc-500/30 flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.08)]">
             <OfficialLogo size={32} animate={true} />
           </div>
         </motion.div>
@@ -71,7 +71,7 @@ export default function EntranceLoader({ onComplete }: EntranceLoaderProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.7 }}
           transition={{ delay: 0.2 }}
-          className="text-[10px] font-mono uppercase tracking-[0.2em] text-cyan-400"
+          className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400"
         >
           Carregando Estrutura de Elite...
         </motion.p>
@@ -79,7 +79,7 @@ export default function EntranceLoader({ onComplete }: EntranceLoaderProps) {
         {/* Progress Bar Container */}
         <div className="w-full h-[2px] bg-white/[0.03] rounded-full overflow-hidden relative">
           <motion.div
-            className="absolute left-0 top-0 bottom-0 bg-gradient-to-r from-blue-500 to-cyan-400"
+            className="absolute left-0 top-0 bottom-0 bg-gradient-to-r from-zinc-500 to-zinc-300"
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -87,14 +87,13 @@ export default function EntranceLoader({ onComplete }: EntranceLoaderProps) {
         {/* Percentage Indicator */}
         <div className="flex justify-between items-center text-[10px] font-mono text-zinc-500 tracking-wider pt-1">
           <span className="uppercase text-zinc-600">// ESTÁTICO E ULTRA-VELOZ</span>
-          <span className="font-bold text-cyan-300">{progress}%</span>
+          <span className="font-bold text-zinc-300">{progress}%</span>
         </div>
 
       </div>
 
-      {/* Decorative tech lines */}
       <div className="absolute left-6 bottom-6 flex items-center gap-2 text-[8px] font-mono text-zinc-600 tracking-widest uppercase">
-        <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse" />
+        <span className="w-1.5 h-1.5 rounded-full bg-zinc-500 animate-pulse" />
         <span>Vite + React + Tailwind</span>
       </div>
       <div className="absolute right-6 bottom-6 text-[8px] font-mono text-zinc-600 tracking-widest uppercase">

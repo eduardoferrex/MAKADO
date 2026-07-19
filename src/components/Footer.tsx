@@ -7,8 +7,8 @@ export default function Footer() {
 
   return (
     <footer id="main-footer" className="bg-[#050507] text-zinc-500 py-12 md:py-16 border-t border-white/[0.03] relative overflow-hidden">
-      {/* Subtle lighting points with cyan hint */}
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-cyan-500/[0.01] blur-3xl rounded-full" />
+      {/* Subtle lighting points with white hint */}
+      <div className="absolute bottom-0 right-0 w-64 h-64 bg-white/[0.01] blur-3xl rounded-full" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
@@ -18,7 +18,7 @@ export default function Footer() {
           {/* Logo brand module (5 cols) */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-cyan-950/20 border border-cyan-500/20 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-zinc-900/40 border border-white/10 flex items-center justify-center">
                 <OfficialLogo size={18} animate={false} />
               </div>
               <span className="font-sans font-black text-sm tracking-[0.25em] text-white uppercase">
@@ -32,28 +32,28 @@ export default function Footer() {
 
           {/* Links list 1 (3 cols) */}
           <div className="md:col-span-3 space-y-3">
-            <h4 className="text-[10px] font-mono uppercase tracking-[0.2em] text-cyan-400 font-semibold">
+            <h4 className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 font-semibold">
               [ Links Rápidos ]
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <a href="#hero-section" className="hover:text-cyan-300 transition-colors">Abertura</a>
+                <a href="#hero-section" className="hover:text-white transition-colors">Abertura</a>
               </li>
               <li>
-                <a href="#why-it-matters" className="hover:text-cyan-300 transition-colors">O Grande Problema</a>
+                <a href="#why-it-matters" className="hover:text-white transition-colors">O Grande Problema</a>
               </li>
               <li>
-                <a href="#what-we-do-section" className="hover:text-cyan-300 transition-colors">Nossos Pilares</a>
+                <a href="#what-we-do-section" className="hover:text-white transition-colors">Nossos Pilares</a>
               </li>
               <li>
-                <a href="#client-journey" className="hover:text-cyan-300 transition-colors">Nossa Metodologia</a>
+                <a href="#client-journey" className="hover:text-white transition-colors">Nossa Metodologia</a>
               </li>
             </ul>
           </div>
 
           {/* Links list 2 (4 cols) */}
           <div className="md:col-span-4 space-y-3">
-            <h4 className="text-[10px] font-mono uppercase tracking-[0.2em] text-cyan-400 font-semibold">
+            <h4 className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 font-semibold">
               [ Fale Conosco ]
             </h4>
             <p className="text-xs text-zinc-400 leading-relaxed font-light max-w-xs">
@@ -64,7 +64,7 @@ export default function Footer() {
                 href={waLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-mono font-bold text-white hover:text-cyan-300 uppercase tracking-widest transition-colors"
+                className="inline-flex items-center gap-2 text-xs font-mono font-bold text-white hover:text-white uppercase tracking-widest transition-colors"
               >
                 <span>Solicitar Reunião</span>
                 <span>→</span>

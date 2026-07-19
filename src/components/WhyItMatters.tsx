@@ -21,9 +21,9 @@ export default function WhyItMatters() {
       id="why-it-matters" 
       className="relative bg-[#050507] text-white py-24 md:py-32 px-6 md:px-12 border-t border-white/[0.02]"
     >
-      {/* Background Soft Gradients with Blue Accents */}
-      <div className="absolute top-[30%] right-[-10%] w-[500px] h-[500px] bg-cyan-500/[0.01] rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-[20%] left-[-10%] w-[400px] h-[400px] bg-blue-500/[0.008] rounded-full blur-[120px] pointer-events-none" />
+      {/* Background Soft Gradients with Gray Accents */}
+      <div className="absolute top-[30%] right-[-10%] w-[500px] h-[500px] bg-zinc-500/[0.015] rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-[20%] left-[-10%] w-[400px] h-[400px] bg-zinc-500/[0.01] rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         
@@ -35,11 +35,11 @@ export default function WhyItMatters() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-16 md:mb-20"
         >
-          <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-cyan-400 block mb-4">
+          <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-zinc-400 block mb-4">
             [ 02. O Grande Problema ]
           </span>
           <h2 className="text-3xl md:text-5xl font-display font-light leading-tight tracking-tight text-white">
-            Por que um site lento ou amador <span className="font-extrabold bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent">faz você perder clientes</span>?
+            Por que um site lento ou amador <span className="font-extrabold bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">faz você perder clientes</span>?
           </h2>
           <p className="text-zinc-400 text-xs md:text-sm mt-4 font-light max-w-xl mx-auto leading-relaxed">
             Seu site atual pode estar espantando clientes sem você perceber. Se ele demora para carregar ou parece amador, as pessoas saem na hora e vão para o concorrente.
@@ -55,7 +55,7 @@ export default function WhyItMatters() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="rounded-3xl p-8 bg-zinc-950/20 border border-white/[0.02] relative overflow-hidden flex flex-col justify-between group hover:border-red-500/10 transition-colors"
+            className="rounded-3xl p-8 bg-zinc-950/20 backdrop-blur-md border border-white/[0.05] relative overflow-hidden flex flex-col justify-between group hover:border-red-500/10 transition-colors"
           >
             <div>
               <div className="flex items-center justify-between mb-8">
@@ -69,7 +69,7 @@ export default function WhyItMatters() {
               </div>
 
               <h3 className="text-xl md:text-2xl font-display font-light text-zinc-300 mb-6">
-                Sites em WordPress e <span className="text-red-400/80 line-through font-normal">Modelos Prontos</span>
+                Sites Amadores e <span className="text-red-400/80 line-through font-normal">Modelos Prontos</span>
               </h3>
 
               <div className="space-y-5">
@@ -117,30 +117,30 @@ export default function WhyItMatters() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-            className="rounded-3xl p-8 bg-zinc-950 border border-cyan-500/15 relative overflow-hidden flex flex-col justify-between shadow-[0_20px_50px_rgba(6,182,212,0.03)] group hover:border-cyan-500/30 transition-all duration-500"
+            className="rounded-3xl p-8 bg-zinc-950/30 backdrop-blur-md border border-white/10 relative overflow-hidden flex flex-col justify-between shadow-[0_20px_50px_rgba(255,255,255,0.01)] group hover:border-white/30 transition-all duration-500"
           >
-            {/* Ambient cyan glowing corner */}
-            <div className="absolute top-0 right-0 w-36 h-36 bg-cyan-500/[0.04] blur-2xl pointer-events-none rounded-full group-hover:scale-125 transition-transform duration-500" />
+            {/* Ambient white glowing corner */}
+            <div className="absolute top-0 right-0 w-36 h-36 bg-white/[0.015] blur-2xl pointer-events-none rounded-full group-hover:scale-125 transition-transform duration-500" />
 
             <div>
               <div className="flex items-center justify-between mb-8">
-                <span className="text-[10px] font-mono tracking-widest text-cyan-400 uppercase">
+                <span className="text-[10px] font-mono tracking-widest text-zinc-400 uppercase">
                   // A Solução MAKADO
                 </span>
-                <span className="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-[9px] font-mono uppercase tracking-widest flex items-center gap-1.5 shadow-[0_0_15px_rgba(6,182,212,0.15)]">
-                  <Trophy className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
+                <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-[9px] font-mono uppercase tracking-widest flex items-center gap-1.5 shadow-[0_0_15px_rgba(255,255,255,0.03)]">
+                  <Trophy className="w-3.5 h-3.5 text-zinc-300 animate-pulse" />
                   <span>Estrutura de Elite</span>
                 </span>
               </div>
 
               <h3 className="text-xl md:text-2xl font-display font-light text-white mb-6">
-                Site Criado do Zero e <span className="font-extrabold text-cyan-300 text-glow-cyan">Visual Super Profissional</span>
+                Site Criado do Zero e <span className="font-extrabold text-zinc-200">Visual Super Profissional</span>
               </h3>
 
               <div className="space-y-5">
                 <div className="flex gap-4">
-                  <div className="w-6 h-6 rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Zap className="w-3.5 h-3.5 text-cyan-400" />
+                  <div className="w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Zap className="w-3.5 h-3.5 text-zinc-300" />
                   </div>
                   <div>
                     <h4 className="text-xs font-semibold text-white uppercase tracking-wider">Velocidade Incrível (Menos de 0.5s)</h4>
@@ -149,8 +149,8 @@ export default function WhyItMatters() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-6 h-6 rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+                  <div className="w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Sparkles className="w-3.5 h-3.5 text-zinc-300" />
                   </div>
                   <div>
                     <h4 className="text-xs font-semibold text-white uppercase tracking-wider">Design Moderno e Impecável</h4>
@@ -159,8 +159,8 @@ export default function WhyItMatters() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-6 h-6 rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Cpu className="w-3.5 h-3.5 text-cyan-400" />
+                  <div className="w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Cpu className="w-3.5 h-3.5 text-zinc-300" />
                   </div>
                   <div>
                     <h4 className="text-xs font-semibold text-white uppercase tracking-wider">Site Seguro e Sempre no Ar</h4>
@@ -171,8 +171,8 @@ export default function WhyItMatters() {
             </div>
 
             <div className="mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
-              <div className="flex items-center gap-3 text-[10px] text-cyan-300 font-mono uppercase tracking-wider">
-                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+              <div className="flex items-center gap-3 text-[10px] text-zinc-300 font-mono uppercase tracking-wider">
+                <span className="w-1.5 h-1.5 rounded-full bg-zinc-400 animate-pulse" />
                 <span>Sua empresa com visual de líder.</span>
               </div>
               
@@ -180,7 +180,7 @@ export default function WhyItMatters() {
                 href={waLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-mono font-bold text-white hover:text-cyan-400 uppercase tracking-widest flex items-center gap-1.5 group-hover:translate-x-1 transition-all"
+                className="text-xs font-mono font-bold text-white hover:text-zinc-200 uppercase tracking-widest flex items-center gap-1.5 group-hover:translate-x-1 transition-all"
               >
                 <span>Quero um Site Assim</span>
                 <span>→</span>
@@ -199,7 +199,7 @@ export default function WhyItMatters() {
           className="mt-20 md:mt-24 rounded-3xl border border-white/[0.04] bg-zinc-950/40 p-6 md:p-10 relative overflow-hidden"
         >
           
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_10%_10%,rgba(6,182,212,0.015),transparent)] pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_10%_10%,rgba(255,255,255,0.015),transparent)] pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
@@ -214,7 +214,7 @@ export default function WhyItMatters() {
                   <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-wider">
                     Simulador de Visitas
                   </span>
-                  <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[8px] font-mono">
+                  <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-zinc-300 text-[8px] font-mono">
                     <Activity className="w-2.5 h-2.5 animate-pulse" />
                     <span>AO VIVO</span>
                   </div>
@@ -246,19 +246,19 @@ export default function WhyItMatters() {
                       <span>Nosso Site (Super Rápido)</span>
                       <span className="text-emerald-400 font-bold">Ninguém Desiste</span>
                     </div>
-                    <div className="relative h-6 bg-zinc-950/80 rounded-md border border-cyan-500/20 overflow-hidden flex items-center justify-between px-3">
+                    <div className="relative h-6 bg-zinc-950/80 rounded-md border border-white/10 overflow-hidden flex items-center justify-between px-3">
                       {/* Flowing particle animation for MAKADO traffic */}
                       <motion.div 
                         initial={{ width: 0 }}
                         animate={{ width: "100%" }}
                         transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
-                        className="absolute inset-y-0 left-0 bg-cyan-500/10" 
+                        className="absolute inset-y-0 left-0 bg-white/5" 
                       />
-                      <div className="flex items-center gap-1.5 text-[9px] font-mono text-cyan-300 z-10">
-                        <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping" />
+                      <div className="flex items-center gap-1.5 text-[9px] font-mono text-zinc-300 z-10">
+                        <span className="w-1.5 h-1.5 rounded-full bg-zinc-400 animate-ping" />
                         <span>Visitantes</span>
                       </div>
-                      <span className="text-[10px] font-mono font-bold text-cyan-300 z-10">100% Navegam</span>
+                      <span className="text-[10px] font-mono font-bold text-zinc-300 z-10">100% Navegam</span>
                     </div>
                   </div>
 
@@ -271,8 +271,8 @@ export default function WhyItMatters() {
               </div>
 
               {/* Float badge */}
-              <div className="absolute -bottom-3 -left-3 bg-[#050507]/90 backdrop-blur-md border border-cyan-500/20 rounded-xl px-3 py-1.5 flex items-center gap-2 shadow-[0_10px_25px_rgba(0,0,0,0.5)]">
-                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+              <div className="absolute -bottom-3 -left-3 bg-[#050507]/90 backdrop-blur-md border border-white/10 rounded-xl px-3 py-1.5 flex items-center gap-2 shadow-[0_10px_25px_rgba(0,0,0,0.5)]">
+                <span className="w-1.5 h-1.5 rounded-full bg-zinc-400 animate-pulse" />
                 <span className="text-[9px] font-mono uppercase tracking-wider text-white">Aproveitamento do Anúncio: 99%</span>
               </div>
             </div>
@@ -280,7 +280,7 @@ export default function WhyItMatters() {
             {/* Right Column: Visual Animated Metrics */}
             <div className="lg:col-span-7 space-y-6">
               <div>
-                <span className="text-[9px] font-mono text-cyan-400 uppercase tracking-[0.2em] block mb-1">
+                <span className="text-[9px] font-mono text-zinc-400 uppercase tracking-[0.2em] block mb-1">
                   [ A Diferença na Prática ]
                 </span>
                 <h4 className="text-xl md:text-2xl font-display font-light text-white">
@@ -294,10 +294,10 @@ export default function WhyItMatters() {
                 <div className="space-y-1">
                   <div className="flex justify-between items-end text-[11px]">
                     <span className="font-mono text-zinc-400 uppercase tracking-wider flex items-center gap-1">
-                      <Timer className="w-3.5 h-3.5 text-cyan-500" />
+                      <Timer className="w-3.5 h-3.5 text-zinc-400" />
                       Velocidade Avaliada pelo Google (Maior é Melhor)
                     </span>
-                    <span className="font-mono font-bold text-cyan-300">Nosso Site 99% vs Outros 35%</span>
+                    <span className="font-mono font-bold text-zinc-200">Nosso Site 99% vs Outros 35%</span>
                   </div>
                   <div className="h-1.5 w-full bg-zinc-900 rounded-full overflow-hidden flex">
                     <motion.div 
@@ -305,7 +305,7 @@ export default function WhyItMatters() {
                       whileInView={{ width: "99%" }}
                       viewport={{ once: true }}
                       transition={{ duration: 1, ease: "easeOut" }}
-                      className="h-full bg-gradient-to-r from-blue-500 to-cyan-400"
+                      className="h-full bg-gradient-to-r from-zinc-500 to-white"
                     />
                   </div>
                 </div>
@@ -314,10 +314,10 @@ export default function WhyItMatters() {
                 <div className="space-y-1">
                   <div className="flex justify-between items-end text-[11px]">
                     <span className="font-mono text-zinc-400 uppercase tracking-wider flex items-center gap-1">
-                      <Activity className="w-3.5 h-3.5 text-cyan-500" />
+                      <Activity className="w-3.5 h-3.5 text-zinc-400" />
                       Visitantes que Ficam no Site (Maior é Melhor)
                     </span>
-                    <span className="font-mono font-bold text-cyan-300">Nosso Site 98% vs Outros 42%</span>
+                    <span className="font-mono font-bold text-zinc-200">Nosso Site 98% vs Outros 42%</span>
                   </div>
                   <div className="h-1.5 w-full bg-zinc-900 rounded-full overflow-hidden">
                     <motion.div 
@@ -325,7 +325,7 @@ export default function WhyItMatters() {
                       whileInView={{ width: "98%" }}
                       viewport={{ once: true }}
                       transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
-                      className="h-full bg-gradient-to-r from-blue-500 to-cyan-400"
+                      className="h-full bg-gradient-to-r from-zinc-500 to-white"
                     />
                   </div>
                 </div>
@@ -334,10 +334,10 @@ export default function WhyItMatters() {
                 <div className="space-y-1">
                   <div className="flex justify-between items-end text-[11px]">
                     <span className="font-mono text-zinc-400 uppercase tracking-wider flex items-center gap-1">
-                      <Ban className="w-3.5 h-3.5 text-cyan-500" />
+                      <Ban className="w-3.5 h-3.5 text-zinc-400" />
                       Peso Total do Site (Mais Leve é Melhor)
                     </span>
-                    <span className="font-mono font-bold text-cyan-300">Nosso Site: 450KB (Leve) vs Outros: 4.2MB (Pesado)</span>
+                    <span className="font-mono font-bold text-zinc-200">Nosso Site: 450KB (Leve) vs Outros: 4.2MB (Pesado)</span>
                   </div>
                   <div className="h-1.5 w-full bg-zinc-900 rounded-full overflow-hidden flex justify-between">
                     <motion.div 
@@ -345,15 +345,15 @@ export default function WhyItMatters() {
                       whileInView={{ width: "15%" }}
                       viewport={{ once: true }}
                       transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-                      className="h-full bg-cyan-400"
+                      className="h-full bg-zinc-400"
                     />
                   </div>
                 </div>
 
               </div>
 
-              <div className="p-3.5 rounded-xl bg-cyan-950/20 border border-cyan-500/10 text-[11px] text-zinc-400 font-light leading-relaxed">
-                <span className="font-mono text-cyan-300 mr-1.5 uppercase font-semibold">[ Fato Comprovado ]:</span> 
+              <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 text-[11px] text-zinc-400 font-light leading-relaxed">
+                <span className="font-mono text-zinc-300 mr-1.5 uppercase font-semibold">[ Fato Comprovado ]:</span> 
                 Sites super rápidos trazem até 3 vezes mais contatos do que páginas demoradas. Cada segundo de espera a menos é mais dinheiro no seu bolso.
               </div>
             </div>

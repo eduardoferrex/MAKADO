@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import WhatWeDo from "./components/WhatWeDo";
 import WhyItMatters from "./components/WhyItMatters";
 import FreeMeeting from "./components/FreeMeeting";
+import FAQ from "./components/FAQ";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
 import FloatingWA from "./components/FloatingWA";
@@ -48,10 +49,13 @@ export default function App() {
         {/* 4. Como funciona a reunião gratuita */}
         <FreeMeeting />
 
-        {/* 5. Chamada final */}
+        {/* 5. Perguntas Frequentes */}
+        <FAQ />
+
+        {/* 6. Chamada final */}
         <FinalCTA />
 
-        {/* 6. Rodapé */}
+        {/* 7. Rodapé */}
         <Footer />
 
         {/* Persistent Floating Support Trigger */}
