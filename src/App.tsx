@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Hero from "./components/Hero";
 import WhatWeDo from "./components/WhatWeDo";
 import WhyItMatters from "./components/WhyItMatters";
@@ -6,9 +6,13 @@ import FreeMeeting from "./components/FreeMeeting";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
 import FloatingWA from "./components/FloatingWA";
+import EntranceLoader from "./components/EntranceLoader";
+import { AnimatePresence } from "motion/react";
 import { StarsBackground } from "@/components/ui/stars";
 
 export default function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   // Smooth scroll handler to scroll past the hero section
   const handleScrollToWhatWeDo = () => {
     const section = document.getElementById("what-we-do-section");
@@ -18,33 +22,41 @@ export default function App() {
   };
 
   return (
-    <StarsBackground 
-      className="min-h-screen bg-[#08080a] text-white selection:bg-[#ffffff] selection:text-black antialiased font-sans relative overflow-x-hidden"
-      starCount={180}
-    >
-      {/* High-end Tactile noise texture overlay sitting above elements but passing mouse events */}
-      <div className="fixed inset-0 bg-noise pointer-events-none z-50 mix-blend-overlay opacity-80" />
+    <>
+      <AnimatePresence mode="wait">
+        {!isLoaded && (
+          <EntranceLoader key="loader" onComplete={() => setIsLoaded(true)} />
+        )}
+      </AnimatePresence>
 
-      {/* 1. Abertura (Hero) */}
-      <Hero onLearnMoreClick={handleScrollToWhatWeDo} />
+      <StarsBackground 
+        className="min-h-screen bg-[#050507] text-white selection:bg-[#ffffff] selection:text-black antialiased font-sans relative overflow-x-hidden"
+        starCount={180}
+      >
+        {/* High-end Tactile noise texture overlay sitting above elements but passing mouse events */}
+        <div className="fixed inset-0 bg-noise pointer-events-none z-50 mix-blend-overlay opacity-80" />
 
-      {/* 2. O que a MAKADO faz */}
-      <WhatWeDo />
+        {/* 1. Abertura (Hero) */}
+        <Hero onLearnMoreClick={handleScrollToWhatWeDo} />
 
-      {/* 3. Por que isso importa */}
-      <WhyItMatters />
+        {/* 2. O que a MAKADO faz */}
+        <WhatWeDo />
 
-      {/* 4. Como funciona a reunião gratuita */}
-      <FreeMeeting />
+        {/* 3. Por que isso importa */}
+        <WhyItMatters />
 
-      {/* 5. Chamada final */}
-      <FinalCTA />
+        {/* 4. Como funciona a reunião gratuita */}
+        <FreeMeeting />
 
-      {/* 6. Rodapé */}
-      <Footer />
+        {/* 5. Chamada final */}
+        <FinalCTA />
 
-      {/* Persistent Floating Support Trigger */}
-      <FloatingWA />
-    </StarsBackground>
+        {/* 6. Rodapé */}
+        <Footer />
+
+        {/* Persistent Floating Support Trigger */}
+        <FloatingWA />
+      </StarsBackground>
+    </>
   );
 }

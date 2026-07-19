@@ -1,304 +1,247 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import { ArrowUpRight, Monitor, Layout, Cpu } from "lucide-react";
+import { motion } from "motion/react";
+import { ArrowRight, Sparkles, Layout, Globe, Cpu, Search, CheckCircle, Flame, Target, MessageSquareCode } from "lucide-react";
+
+interface Pillar {
+  number: string;
+  title: string;
+  description: string;
+  details: string[];
+  features: string[];
+  icon: React.ReactNode;
+}
 
 export default function WhatWeDo() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKADO";
 
-  const containerVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.15
-      }
+  const pillars: Pillar[] = [
+    {
+      number: "01",
+      title: "Páginas de Vendas (Landing Pages)",
+      description: "Páginas feitas sob medida para atrair clientes vindos de anúncios (Google, Instagram e Facebook). Criamos tudo com código rápido e moderno, sem usar ferramentas pesadas que deixam o site lento.",
+      details: [
+        "Foco total em aumentar suas vendas.",
+        "Textos simples e convincentes que quebram as dúvidas dos clientes.",
+        "Conexão direta com sistemas de anúncios do Instagram e Google."
+      ],
+      features: ["Anúncios", "Textos de Venda", "Super Rápido"],
+      icon: <Target className="w-5 h-5 text-cyan-400" />
+    },
+    {
+      number: "02",
+      title: "Design Exclusivo e Identidade",
+      description: "Sua empresa merece a melhor imagem na internet. Criamos visuais e designs do zero, sem copiar ninguém, para destacar seu negócio como o melhor do seu mercado.",
+      details: [
+        "Design único criado do zero (sem usar modelos prontos).",
+        "Letras e cores bonitas que facilitam a leitura de qualquer pessoa.",
+        "Visual moderno e profissional que passa muita confiança."
+      ],
+      features: ["Design Único", "Visual Moderno"],
+      icon: <Sparkles className="w-5 h-5 text-cyan-400" />
+    },
+    {
+      number: "03",
+      title: "Sistemas & Painéis Próprios",
+      description: "Para empresas que precisam de soluções personalizadas. Criamos portais de clientes, painéis de controle rápidos e ferramentas integradas que organizam o seu negócio.",
+      details: [
+        "Conexão fácil com WhatsApp, sistemas de clientes e ferramentas.",
+        "Organização completa e segura que cresce junto com sua empresa.",
+        "Proteção total para as informações dos seus clientes."
+      ],
+      features: ["Sistemas Web", "Feito para Você"],
+      icon: <Cpu className="w-5 h-5 text-cyan-400" />
+    },
+    {
+      number: "04",
+      title: "Destaque no Google (SEO)",
+      description: "Não adianta ter um site bonito se ele for lento e ninguém achar. Deixamos sua página super leve para ela alcançar as melhores posições de busca e superar seus concorrentes.",
+      details: [
+        "Aprovado nas regras de qualidade do próprio Google.",
+        "Carrega em menos de um segundo para nenhum visitante desistir.",
+        "Organizado do jeito certo para o Google sugerir seu site aos clientes."
+      ],
+      features: ["Nota 100 no Google", "Fácil de Achar"],
+      icon: <Globe className="w-5 h-5 text-cyan-400" />
     }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } 
-    }
-  };
+  ];
 
   return (
     <section 
       id="what-we-do-section" 
-      className="relative bg-[#0d0d10] text-white py-32 md:py-44 px-6 md:px-12 overflow-hidden border-t border-b border-white/[0.03]"
-      style={{ clipPath: "polygon(0 0, 100% 1.5vw, 100% 100%, 0 calc(100% - 1.5vw))" }}
+      className="relative bg-[#050507] text-white py-24 md:py-28 px-6 md:px-12 border-t border-white/[0.02]"
     >
-      {/* Decorative vertical running lines as structural layout anchors */}
-      <div className="absolute top-0 left-[15%] w-[1px] h-full bg-white/[0.02] pointer-events-none hidden md:block" />
-      <div className="absolute top-0 right-[25%] w-[1px] h-full bg-white/[0.02] pointer-events-none hidden md:block" />
+      {/* Background decoration with cyan/blue ambient light */}
+      <div className="absolute top-[20%] left-[-10%] w-[450px] h-[450px] bg-cyan-500/[0.01] rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-[20%] right-[-10%] w-[450px] h-[450px] bg-blue-500/[0.01] rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         
-        {/* Asymmetric Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-20 md:mb-32">
-          <div className="lg:col-span-8">
-            <span className="text-[11px] font-mono uppercase tracking-[0.3em] text-zinc-500 block mb-4">
-              [ 02. Entregáveis de Elite ]
+        {/* Header */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 md:mb-20"
+        >
+          <div className="max-w-2xl">
+            <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-cyan-400 block mb-3">
+              [ 03. O Que Fazemos ]
             </span>
-            <h2 className="text-4xl md:text-6xl font-display font-light leading-tight tracking-tight text-white">
-              Nossa assinatura é a <span className="font-extrabold text-white block md:inline">perfeição estética</span> aliada à alta conversão.
+            <h2 className="text-3xl md:text-5xl font-display font-light leading-tight tracking-tight">
+              Como ajudamos sua empresa <span className="font-extrabold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent">a vender muito mais</span>
             </h2>
-          </div>
-          <div className="lg:col-span-4 flex flex-col justify-end">
-            <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light">
-              Não desenvolvemos templates genéricos. Desenhamos códigos autorais e estruturas sob medida, pensadas de forma cirúrgica para destacar sua autoridade e multiplicar seus resultados.
+            <p className="text-zinc-400 text-xs md:text-sm mt-4 font-light leading-relaxed">
+              Criamos páginas e sistemas modernos sob medida para o seu negócio. Sem modelos prontos e com foco total em trazer mais clientes reais para você.
             </p>
           </div>
-        </div>
+          
+          <div className="flex-shrink-0">
+            <a 
+              href={waLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-3.5 rounded-full border border-cyan-500/20 hover:border-cyan-500 bg-cyan-950/10 text-[11px] text-cyan-300 hover:text-black hover:bg-cyan-400 font-mono uppercase tracking-wider transition-all duration-300 flex items-center gap-2.5 cursor-pointer group shadow-[0_0_20px_rgba(6,182,212,0.1)]"
+            >
+              <span>Quero falar sobre meu site</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
+        </motion.div>
 
-        {/* Asymmetric Alternated Grid Blocks (Avoiding boring 3x1 grids) */}
+        {/* Modular Pillars Showcase Grid */}
         <motion.div 
-          variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="space-y-12 md:space-y-24"
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.1
+              }
+            }
+          }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
         >
+          {pillars.map((pillar, idx) => {
+            const isHovered = hoveredIndex === idx;
+            return (
+              <motion.div
+                key={idx}
+                onMouseEnter={() => setHoveredIndex(idx)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { 
+                    opacity: 1, 
+                    y: 0,
+                    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } 
+                  }
+                }}
+                whileHover={{ y: -4 }}
+                className="p-6 md:p-8 rounded-3xl bg-zinc-950/30 border border-white/[0.03] hover:border-cyan-500/30 hover:bg-zinc-950/60 transition-all duration-500 flex flex-col justify-between relative overflow-hidden group min-h-[360px] shadow-[0_10px_30px_rgba(0,0,0,0.1)]"
+              >
+                {/* Visual blue subtle glow on hover */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/[0.02] blur-2xl rounded-full translate-x-12 -translate-y-12 group-hover:scale-150 transition-all duration-500" />
+                
+                {/* Card Header */}
+                <div>
+                  <div className="flex items-center justify-between mb-6 border-b border-white/[0.03] pb-4">
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-8 h-8 rounded-lg bg-cyan-950/40 border border-cyan-500/20 flex items-center justify-center">
+                        {pillar.icon}
+                      </div>
+                      <span className="font-mono text-zinc-600 text-xs tracking-widest font-bold">
+                        // {pillar.number}
+                      </span>
+                    </div>
+                    <div className="flex gap-1.5">
+                      {pillar.features.map((feature, fIdx) => (
+                        <span 
+                          key={fIdx} 
+                          className="px-2 py-0.5 rounded-full bg-cyan-500/5 border border-cyan-500/10 text-[8px] font-mono text-cyan-300 uppercase tracking-widest"
+                        >
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Title & Description */}
+                  <h3 className="text-lg md:text-xl font-display font-light text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                    {pillar.title}
+                  </h3>
+                  <p className="text-xs text-zinc-400 leading-relaxed font-light mb-6">
+                    {pillar.description}
+                  </p>
+
+                  {/* Bullet points detailing */}
+                  <ul className="space-y-2">
+                    {pillar.details.map((detail, dIdx) => (
+                      <li key={dIdx} className="flex items-start gap-2 text-xs text-zinc-500 font-light leading-relaxed">
+                        <span className="w-1.5 h-1.5 rounded-full bg-cyan-400/40 mt-1.5 flex-shrink-0" />
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Card Footer */}
+                <div className="mt-8 pt-4 border-t border-white/[0.02] flex items-center justify-between">
+                  <span className="text-[9px] font-mono uppercase tracking-wider text-zinc-600 group-hover:text-cyan-400/70 transition-colors">
+                    ESTRUTURA DIGITAL DE ELITE
+                  </span>
+                  <a 
+                    href={waLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 rounded-full border border-white/5 bg-white/[0.02] group-hover:bg-cyan-400 group-hover:text-black flex items-center justify-center text-zinc-400 transition-all duration-300"
+                  >
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+
+              </motion.div>
+            );
+          })}
+        </motion.div>
+
+        {/* High-Ticket Credibility Highlight Banner */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-16 md:mt-20 p-6 md:p-10 rounded-3xl bg-zinc-950 border border-cyan-500/10 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 shadow-[0_15px_40px_rgba(0,210,255,0.01)]"
+        >
+          <div className="absolute top-0 left-0 w-32 h-32 bg-cyan-500/[0.02] blur-2xl rounded-full" />
           
-          {/* Item 01: Websites Autoriais */}
-          <motion.div 
-            variants={itemVariants}
-            onMouseEnter={() => setHoveredIndex(0)}
-            onMouseLeave={() => setHoveredIndex(null)}
-            className="grid grid-cols-1 lg:grid-cols-12 border-t border-b border-white/[0.04] py-12 gap-8 items-center group hover:bg-white/[0.01] transition-all duration-500 relative"
-          >
-            <div className="lg:col-span-1 text-zinc-600 font-mono text-xs md:text-sm self-start pt-1">
-              [ 01 ]
+          <div className="max-w-xl relative z-10 text-center md:text-left">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-cyan-500/5 border border-cyan-500/10 mb-3">
+              <Flame className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
+              <span className="text-[8px] font-mono text-cyan-300 tracking-widest uppercase">Alta Tecnologia</span>
             </div>
-            
-            <div className="lg:col-span-5 relative">
-              <h3 className="text-3xl md:text-5xl font-display font-bold tracking-tight text-white mb-4 group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-4">
-                Websites Autoriais
-                <Layout className="w-5 h-5 text-zinc-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </h3>
-              <p className="text-zinc-400 text-sm md:text-base font-light leading-relaxed">
-                Seu posicionamento digital em alto padrão. Desenvolvemos interfaces proprietárias extremamente rápidas (foco no Core Web Vitals do Google) para reter a atenção do seu cliente ideal logo nos primeiros segundos de navegação.
-              </p>
-            </div>
+            <h3 className="text-lg md:text-xl font-display font-light text-white leading-snug">
+              Chega de sites lentos e travados. Seu site com <span className="font-extrabold text-cyan-300">tecnologia rápida e moderna</span>.
+            </h3>
+            <p className="text-xs text-zinc-400 font-light mt-2 leading-relaxed">
+              Sua página será incrivelmente leve, rápida de abrir e livre de bugs ou problemas chatos que dão dor de cabeça.
+            </p>
+          </div>
 
-            {/* Interactive Wireframe Visual Element for Websites */}
-            <div className="lg:col-span-5 flex flex-col justify-center items-start lg:items-end lg:px-8 relative overflow-hidden h-32 md:h-40">
-              <AnimatePresence mode="wait">
-                {hoveredIndex === 0 ? (
-                  <motion.div 
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.4 }}
-                    className="w-full max-w-xs bg-zinc-950 border border-white/10 rounded-xl p-4 space-y-3 font-mono text-[9px] text-zinc-500 shadow-2xl"
-                  >
-                    <div className="flex items-center justify-between border-b border-white/5 pb-2">
-                      <div className="flex gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-red-500/60" />
-                        <span className="w-1.5 h-1.5 rounded-full bg-yellow-500/60" />
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/60" />
-                      </div>
-                      <span className="text-[8px] text-zinc-600">makado.agency</span>
-                    </div>
-                    <div className="space-y-1.5">
-                      <div className="h-2 bg-white/10 rounded w-2/3" />
-                      <div className="h-1.5 bg-white/5 rounded w-full" />
-                      <div className="h-1.5 bg-white/5 rounded w-5/6" />
-                    </div>
-                    <div className="grid grid-cols-3 gap-2 pt-1">
-                      <div className="h-8 bg-white/[0.02] border border-white/5 rounded flex items-center justify-center font-bold">SEO</div>
-                      <div className="h-8 bg-white/[0.02] border border-white/5 rounded flex items-center justify-center font-bold text-white">99%</div>
-                      <div className="h-8 bg-white/[0.02] border border-white/5 rounded flex items-center justify-center font-bold">LCP</div>
-                    </div>
-                  </motion.div>
-                ) : (
-                  <motion.div 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="text-zinc-550 font-mono text-[11px] uppercase tracking-wider space-y-1 text-left lg:text-right"
-                  >
-                    <p>— UI/UX Design Exclusivo</p>
-                    <p>— SEO Otimizado Core Web Vitals</p>
-                    <p>— Mobile First Nativo</p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            <div className="lg:col-span-1 flex justify-end">
-              <a 
-                href={waLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full border border-white/10 hover:border-white text-white flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300"
-              >
-                <ArrowUpRight className="w-5 h-5" />
-              </a>
-            </div>
-          </motion.div>
-
-          {/* Item 02: Sistemas Sob Medida */}
-          <motion.div 
-            variants={itemVariants}
-            onMouseEnter={() => setHoveredIndex(1)}
-            onMouseLeave={() => setHoveredIndex(null)}
-            className="grid grid-cols-1 lg:grid-cols-12 border-b border-white/[0.04] pb-12 gap-8 items-center group hover:bg-white/[0.01] transition-all duration-500 relative"
-          >
-            <div className="lg:col-span-1 text-zinc-600 font-mono text-xs md:text-sm self-start pt-1">
-              [ 02 ]
-            </div>
-            
-            <div className="lg:col-span-5 relative">
-              <h3 className="text-3xl md:text-5xl font-display font-bold tracking-tight text-white mb-4 group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-4">
-                Sistemas Sob Medida
-                <Cpu className="w-5 h-5 text-zinc-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </h3>
-              <p className="text-zinc-400 text-sm md:text-base font-light leading-relaxed">
-                Painéis internos, integrações de APIs e automações robustas. Substituímos planilhas e sistemas confusos por softwares velozes que simplificam sua operação de ponta a ponta e eliminam gargalos de escala.
-              </p>
-            </div>
-
-            {/* Interactive Wireframe Visual Element for Systems */}
-            <div className="lg:col-span-5 flex flex-col justify-center items-start lg:items-end lg:px-8 relative overflow-hidden h-32 md:h-40">
-              <AnimatePresence mode="wait">
-                {hoveredIndex === 1 ? (
-                  <motion.div 
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.4 }}
-                    className="w-full max-w-xs bg-zinc-950 border border-white/10 rounded-xl p-4 space-y-3 font-mono text-[9px] text-zinc-500 shadow-2xl"
-                  >
-                    <div className="flex items-center justify-between border-b border-white/5 pb-2">
-                      <span className="text-white font-bold">OPERATIONS_DASHBOARD</span>
-                      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    </div>
-                    <div className="grid grid-cols-2 gap-2">
-                      <div className="border border-white/5 p-2 rounded bg-white/[0.01]">
-                        <p className="text-zinc-600">APIs ALIVE</p>
-                        <p className="text-white font-bold text-xs">24 / 24</p>
-                      </div>
-                      <div className="border border-white/5 p-2 rounded bg-white/[0.01]">
-                        <p className="text-zinc-600">REDUNDANCY</p>
-                        <p className="text-white font-bold text-xs">99.99%</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-2 pt-1">
-                      <div className="h-1.5 bg-emerald-500/20 rounded-full w-full overflow-hidden">
-                        <motion.div 
-                          initial={{ width: 0 }} 
-                          animate={{ width: "92%" }} 
-                          transition={{ duration: 1 }} 
-                          className="h-full bg-emerald-500" 
-                        />
-                      </div>
-                      <span className="text-emerald-400">92%</span>
-                    </div>
-                  </motion.div>
-                ) : (
-                  <motion.div 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="text-zinc-550 font-mono text-[11px] uppercase tracking-wider space-y-1 text-left lg:text-right"
-                  >
-                    <p>— Integração Ágil de APIs</p>
-                    <p>— Painéis de Controle de Dados</p>
-                    <p>— Engenharia de Fluxo de Trabalho</p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            <div className="lg:col-span-1 flex justify-end">
-              <a 
-                href={waLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full border border-white/10 hover:border-white text-white flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300"
-              >
-                <ArrowUpRight className="w-5 h-5" />
-              </a>
-            </div>
-          </motion.div>
-
-          {/* Item 03: Estruturas Digitais */}
-          <motion.div 
-            variants={itemVariants}
-            onMouseEnter={() => setHoveredIndex(2)}
-            onMouseLeave={() => setHoveredIndex(null)}
-            className="grid grid-cols-1 lg:grid-cols-12 border-b border-white/[0.04] pb-12 gap-8 items-center group hover:bg-white/[0.01] transition-all duration-500 relative"
-          >
-            <div className="lg:col-span-1 text-zinc-600 font-mono text-xs md:text-sm self-start pt-1">
-              [ 03 ]
-            </div>
-            
-            <div className="lg:col-span-5 relative">
-              <h3 className="text-3xl md:text-5xl font-display font-bold tracking-tight text-white mb-4 group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-4">
-                Estruturas Digitais
-                <Monitor className="w-5 h-5 text-zinc-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </h3>
-              <p className="text-zinc-400 text-sm md:text-base font-light leading-relaxed">
-                Landing pages de altíssima conversão e funis estruturados. Configuramos a engrenagem técnica completa que recebe o seu tráfego pago para reduzir drasticamente a rejeição e converter cliques em novos contatos comerciais.
-              </p>
-            </div>
-
-            {/* Interactive Wireframe Visual Element for Structures */}
-            <div className="lg:col-span-5 flex flex-col justify-center items-start lg:items-end lg:px-8 relative overflow-hidden h-32 md:h-40">
-              <AnimatePresence mode="wait">
-                {hoveredIndex === 2 ? (
-                  <motion.div 
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.4 }}
-                    className="w-full max-w-xs bg-zinc-950 border border-white/10 rounded-xl p-4 space-y-2.5 font-mono text-[9px] text-zinc-500 shadow-2xl"
-                  >
-                    <div className="text-center border-b border-white/5 pb-2 text-zinc-400 font-bold">
-                      CONVERSION_FUNNEL
-                    </div>
-                    
-                    {/* Funnel Layers */}
-                    <div className="space-y-1.5 text-center text-white">
-                      <div className="bg-white/10 py-1 px-3 rounded w-full text-[8px] border border-white/5">
-                        Tráfego Pago (100%)
-                      </div>
-                      <div className="bg-white/15 py-1 px-3 rounded w-4/5 mx-auto text-[8px] border border-white/5">
-                        Visita Ativa (78%)
-                      </div>
-                      <div className="bg-white/20 py-1 px-3 rounded w-3/5 mx-auto text-[8px] font-bold border border-white/10 flex items-center justify-center gap-1">
-                        <span className="w-1 h-1 rounded-full bg-emerald-400 animate-ping" />
-                        WhatsApp (14.2%)
-                      </div>
-                    </div>
-                  </motion.div>
-                ) : (
-                  <motion.div 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="text-zinc-550 font-mono text-[11px] uppercase tracking-wider space-y-1 text-left lg:text-right"
-                  >
-                    <p>— Funis de Conversão Premium</p>
-                    <p>— Landing Pages Ultra Rápidas</p>
-                    <p>— Arquitetura de Infraestrutura Nuvem</p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            <div className="lg:col-span-1 flex justify-end">
-              <a 
-                href={waLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full border border-white/10 hover:border-white text-white flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300"
-              >
-                <ArrowUpRight className="w-5 h-5" />
-              </a>
-            </div>
-          </motion.div>
-
+          <div className="relative z-10 flex-shrink-0 w-full md:w-auto">
+            <a
+              href={waLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full md:w-auto px-6 py-3.5 rounded-full bg-white text-black font-semibold text-xs hover:scale-[1.02] hover:bg-cyan-400 transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_10px_20px_rgba(0,210,255,0.05)]"
+            >
+              <span>Agendar conversa gratuita</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
         </motion.div>
 
       </div>
