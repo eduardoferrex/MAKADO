@@ -27,7 +27,8 @@ export default function WhatWeDo() {
   return (
     <section 
       id="what-we-do-section" 
-      className="relative bg-[#0d0d10] text-white py-24 md:py-36 px-6 md:px-12 overflow-hidden border-t border-b border-white/[0.03]"
+      className="relative bg-[#0d0d10] text-white py-32 md:py-44 px-6 md:px-12 overflow-hidden border-t border-b border-white/[0.03]"
+      style={{ clipPath: "polygon(0 0, 100% 1.5vw, 100% 100%, 0 calc(100% - 1.5vw))" }}
     >
       {/* Decorative vertical running lines as structural layout anchors */}
       <div className="absolute top-0 left-[15%] w-[1px] h-full bg-white/[0.02] pointer-events-none hidden md:block" />
@@ -78,7 +79,7 @@ export default function WhatWeDo() {
                 <Layout className="w-5 h-5 text-zinc-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </h3>
               <p className="text-zinc-400 text-sm md:text-base font-light leading-relaxed">
-                Páginas institucionais de alto padrão que traduzem a verdadeira força da sua marca. Unimos velocidade ultrarrápida (Core Web Vitals do Google), usabilidade impecável e um design que prende a atenção do seu cliente ideal logo nos primeiros segundos de navegação.
+                Seu posicionamento digital em alto padrão. Desenvolvemos interfaces proprietárias extremamente rápidas (foco no Core Web Vitals do Google) para reter a atenção do seu cliente ideal logo nos primeiros segundos de navegação.
               </p>
             </div>
 
@@ -155,7 +156,7 @@ export default function WhatWeDo() {
                 <Cpu className="w-5 h-5 text-zinc-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </h3>
               <p className="text-zinc-400 text-sm md:text-base font-light leading-relaxed">
-                Plataformas inteligentes, dashboards internos, painéis administrativos e automações que resolvem gargalos de escala da sua empresa. Criamos sistemas seguros, rápidos e intuitivos para que sua operação funcione sem fricção e de forma automatizada.
+                Painéis internos, integrações de APIs e automações robustas. Substituímos planilhas e sistemas confusos por softwares velozes que simplificam sua operação de ponta a ponta e eliminam gargalos de escala.
               </p>
             </div>
 
@@ -239,7 +240,7 @@ export default function WhatWeDo() {
                 <Monitor className="w-5 h-5 text-zinc-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </h3>
               <p className="text-zinc-400 text-sm md:text-base font-light leading-relaxed">
-                Landing pages de captura agressiva, funis de conversão otimizados e setups técnicos de alta performance. Estruturamos todo o ecossistema que recebe o seu tráfego pago, reduzindo a taxa de rejeição e maximizando a taxa de conversão das suas campanhas.
+                Landing pages de altíssima conversão e funis estruturados. Configuramos a engrenagem técnica completa que recebe o seu tráfego pago para reduzir drasticamente a rejeição e converter cliques em novos contatos comerciais.
               </p>
             </div>
 

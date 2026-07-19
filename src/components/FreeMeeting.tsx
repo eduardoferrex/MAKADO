@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
-import { ArrowRight, MessageSquare, CalendarRange, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function FreeMeeting() {
   const [hoveredStep, setHoveredStep] = useState<number | null>(null);
@@ -27,7 +27,8 @@ export default function FreeMeeting() {
   return (
     <section 
       id="free-meeting-section" 
-      className="relative bg-[#0d0d10] text-white py-24 md:py-36 px-6 md:px-12 border-t border-b border-white/[0.03]"
+      className="relative bg-[#0d0d10] text-white py-32 md:py-44 px-6 md:px-12 border-t border-b border-white/[0.03]"
+      style={{ clipPath: "polygon(0 0, 100% 1.5vw, 100% 100%, 0 calc(100% - 1.5vw))" }}
     >
       {/* Structural layout grid lines */}
       <div className="absolute top-0 left-[25%] w-[1px] h-full bg-white/[0.015] pointer-events-none hidden md:block" />
@@ -73,8 +74,8 @@ export default function FreeMeeting() {
               01
             </div>
 
-            <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-10 text-white group-hover:scale-110 group-hover:border-white/30 transition-transform">
-              <MessageSquare className="w-4 h-4" />
+            <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-zinc-400 border-l-2 border-white pl-3 py-1 mb-10 transition-all group-hover:border-white group-hover:text-white">
+              STAGE_01 // INITIAL_CONTACT
             </div>
 
             <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-500 mb-2">Primeiro Passo</span>
@@ -101,8 +102,8 @@ export default function FreeMeeting() {
               02
             </div>
 
-            <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-10 text-white group-hover:scale-110 group-hover:border-white/30 transition-transform">
-              <CalendarRange className="w-4 h-4" />
+            <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-zinc-400 border-l-2 border-white pl-3 py-1 mb-10 transition-all group-hover:border-white group-hover:text-white">
+              STAGE_02 // DIAGNOSTIC_CALL
             </div>
 
             <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-500 mb-2">Segundo Passo</span>
@@ -129,8 +130,8 @@ export default function FreeMeeting() {
               03
             </div>
 
-            <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-10 text-white group-hover:scale-110 group-hover:border-white/30 transition-transform">
-              <Sparkles className="w-4 h-4" />
+            <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-zinc-400 border-l-2 border-white pl-3 py-1 mb-10 transition-all group-hover:border-white group-hover:text-white">
+              STAGE_03 // PLAN_DELIVERY
             </div>
 
             <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-500 mb-2">Terceiro Passo</span>
@@ -144,6 +145,64 @@ export default function FreeMeeting() {
 
         </motion.div>
 
+        {/* Detailed breakdown of the strategic meeting deliverables */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start border-t border-white/[0.04] pt-16"
+        >
+          <div className="lg:col-span-4">
+            <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-500 block mb-2">
+              [ Detalhes da Sessão Estratégica ]
+            </span>
+            <h3 className="text-2xl md:text-3xl font-display font-light text-white tracking-tight">
+              O que entregamos na sua <span className="font-extrabold text-glow-white">Análise Gratuita</span>
+            </h3>
+            <p className="text-zinc-400 text-xs md:text-sm mt-4 leading-relaxed font-light">
+              Nossa reunião estratégica dura entre 15 a 30 minutos e é 100% focada em apontar melhorias de conversão e velocidade para o seu negócio, sem empurrar serviços.
+            </p>
+          </div>
+          <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-zinc-950/40 border border-white/[0.03] p-6 rounded-2xl">
+              <div className="text-white font-mono text-[11px] uppercase tracking-wider mb-2 text-zinc-300">
+                // 01. Raio-X de Conversão
+              </div>
+              <p className="text-zinc-400 text-xs font-light leading-relaxed">
+                Analisamos sua estrutura digital atual (ou de seus concorrentes diretos) para identificar por que você está perdendo leads ou contatos comerciais de alto valor.
+              </p>
+            </div>
+            
+            <div className="bg-zinc-950/40 border border-white/[0.03] p-6 rounded-2xl">
+              <div className="text-white font-mono text-[11px] uppercase tracking-wider mb-2 text-zinc-300">
+                // 02. Auditoria Técnica Rápida
+              </div>
+              <p className="text-zinc-400 text-xs font-light leading-relaxed">
+                Mapeamos o tempo de carregamento e as falhas de experiência (UX/UI) que prejudicam o ranqueamento no Google e aumentam os custos de tráfego pago.
+              </p>
+            </div>
+
+            <div className="bg-zinc-950/40 border border-white/[0.03] p-6 rounded-2xl">
+              <div className="text-white font-mono text-[11px] uppercase tracking-wider mb-2 text-zinc-300">
+                // 03. Planejamento de Arquitetura
+              </div>
+              <p className="text-zinc-400 text-xs font-light leading-relaxed">
+                Definimos as tecnologias mais eficientes para o seu caso (React, Next.js, Node.js ou automações personalizadas) para máxima performance.
+              </p>
+            </div>
+
+            <div className="bg-zinc-950/40 border border-white/[0.03] p-6 rounded-2xl">
+              <div className="text-white font-mono text-[11px] uppercase tracking-wider mb-2 text-zinc-300">
+                // 04. Mapeamento de Prazos
+              </div>
+              <p className="text-zinc-400 text-xs font-light leading-relaxed">
+                Você sai da conversa sabendo exatamente o investimento necessário, o tempo de entrega exato e os próximos passos para lançar a sua estrutura.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Dynamic callout under steps */}
         <div className="mt-20 md:mt-32 border-t border-white/[0.04] pt-12 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="text-left">
@@ -154,11 +213,13 @@ export default function FreeMeeting() {
             href={waLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative overflow-hidden inline-flex items-center gap-3 px-6 py-3.5 bg-white text-black hover:bg-zinc-200 text-xs font-mono font-bold uppercase tracking-wider rounded-xl transition-all shadow-xl hover:shadow-white/[0.03] cursor-pointer"
+            className="group relative overflow-hidden inline-flex items-center gap-3 px-7 py-4 bg-white text-black hover:bg-zinc-100 hover:rounded-2xl text-xs font-mono font-bold uppercase tracking-wider rounded-xl transition-all duration-500 ease-out shadow-xl hover:shadow-[0_15px_30px_rgba(255,255,255,0.08)] hover:-translate-y-0.5 cursor-pointer"
           >
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-black/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-            <span>Garantir Meu Horário</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+            <span className="absolute -inset-1 bg-gradient-to-r from-zinc-200 to-white opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl blur" />
+            
+            <span className="relative z-10">Inicie seu projeto</span>
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300 relative z-10" />
           </a>
         </div>
 

@@ -22,14 +22,38 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
   return (
     <section 
       id="hero-section" 
-      className="relative min-h-screen bg-black text-white overflow-hidden flex flex-col justify-between pt-6 pb-12"
+      className="relative min-h-screen bg-[#0c0c0e] text-white overflow-hidden flex flex-col justify-between pt-6 pb-12"
     >
       {/* Background ultra-thin lines layout grid (for a structural designer feel) */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#111113_1px,transparent_1px),linear-gradient(to_bottom,#111113_1px,transparent_1px)] bg-[size:6rem_6rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_80%,transparent_100%)] pointer-events-none animate-pulse duration-[8000ms]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#111113_1px,transparent_1px),linear-gradient(to_bottom,#111113_1px,transparent_1px)] bg-[size:6rem_6rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_80%,transparent_100%)] pointer-events-none" />
 
-      {/* Background radial soft light points */}
-      <div className="absolute top-[30%] left-[25%] -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/[0.012] rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-[20%] right-[10%] w-[500px] h-[500px] bg-white/[0.008] rounded-full blur-[150px] pointer-events-none" />
+      {/* Background radial soft light points with drifting premium loop */}
+      <motion.div 
+        animate={{ 
+          scale: [1, 1.1, 0.95, 1],
+          x: [0, 25, -15, 0],
+          y: [0, -20, 25, 0] 
+        }}
+        transition={{ 
+          duration: 18, 
+          repeat: Infinity, 
+          ease: "easeInOut" 
+        }}
+        className="absolute top-[25%] left-[20%] -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] bg-white/[0.016] rounded-full blur-[130px] pointer-events-none" 
+      />
+      <motion.div 
+        animate={{ 
+          scale: [1, 0.9, 1.05, 1],
+          x: [0, -30, 20, 0],
+          y: [0, 25, -15, 0] 
+        }}
+        transition={{ 
+          duration: 22, 
+          repeat: Infinity, 
+          ease: "easeInOut" 
+        }}
+        className="absolute bottom-[15%] right-[10%] w-[600px] h-[600px] bg-white/[0.009] rounded-full blur-[160px] pointer-events-none" 
+      />
 
       {/* Decorative vertical running lines with draw transitions */}
       <motion.div 
@@ -106,18 +130,18 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
               </span>
             </div>
 
-            {/* Giant display title block with word staggered entry */}
-            <h1 className="text-4xl sm:text-6xl lg:text-8xl font-display font-light text-white tracking-tighter leading-[0.95]">
+            {/* Giant display title block with word staggered entry (scale + blur) */}
+            <h1 className="text-4xl sm:text-6xl lg:text-8xl font-display font-light text-white tracking-tighter leading-[0.95] text-reveal-mask">
               {headlineWords.map((word, idx) => (
                 <motion.span
                   key={idx}
-                  className={`inline-block mr-3 ${word.includes("imagem") || word.includes("empresa") ? "font-extrabold text-white text-glow-white hover:scale-105 transition-transform cursor-default" : ""}`}
-                  initial={{ opacity: 0, y: 35 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  className={`inline-block mr-3 ${word.includes("imagem") || word.includes("empresa") ? "font-extrabold text-white text-glow-white hover:scale-105 transition-transform duration-300 cursor-default" : ""}`}
+                  initial={{ opacity: 0, filter: "blur(12px)", scale: 0.92, y: 30 }}
+                  animate={{ opacity: 1, filter: "blur(0px)", scale: 1, y: 0 }}
                   transition={{
                     duration: 0.9,
                     ease: [0.16, 1, 0.3, 1],
-                    delay: 0.05 * idx,
+                    delay: 0.08 * idx,
                   }}
                 >
                   {word}
@@ -131,18 +155,18 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
           <div className="lg:col-span-4 lg:pt-20 space-y-8 flex flex-col justify-end">
             
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+              initial={{ opacity: 0, filter: "blur(8px)", y: 20 }}
+              animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
               className="text-zinc-400 text-sm md:text-base leading-relaxed font-light border-l border-white/10 pl-6"
             >
               Criação de soluções digitais de alto impacto para marcas que exigem excelência. Construímos estruturas que geram credibilidade imediata e potencializam suas vendas diariamente.
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.55 }}
               className="pt-4"
             >
               <a
@@ -150,11 +174,13 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
                 href={waLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative overflow-hidden inline-flex items-center gap-3.5 px-6 py-4 rounded-xl bg-white text-black font-mono font-bold text-xs uppercase tracking-wider hover:bg-zinc-200 transition-all cursor-pointer shadow-[0_15px_30px_rgba(255,255,255,0.04)]"
+                className="group relative overflow-hidden inline-flex items-center gap-3.5 px-7 py-4.5 rounded-xl bg-white text-black font-mono font-bold text-xs uppercase tracking-wider hover:bg-zinc-100 hover:rounded-2xl transition-all duration-500 ease-out cursor-pointer shadow-[0_15px_30px_rgba(255,255,255,0.04)] hover:shadow-[0_20px_40px_rgba(255,255,255,0.1)] hover:-translate-y-0.5"
               >
+                {/* Radial glow highlight inside white button */}
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-black/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                <span>Agendar Reunião Gratuita</span>
-                <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1.5 transition-transform" />
+                <span className="absolute -inset-1 bg-gradient-to-r from-zinc-300 to-white opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl blur" />
+                <span className="relative z-10">Inicie seu projeto</span>
+                <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-2 transition-transform duration-300 relative z-10" />
               </a>
             </motion.div>
 

@@ -8,7 +8,8 @@ export default function FinalCTA() {
   return (
     <section 
       id="final-cta-section" 
-      className="relative bg-black text-white py-28 md:py-40 px-6 md:px-12 overflow-hidden"
+      className="relative bg-[#0c0c0e] text-white py-32 md:py-48 px-6 md:px-12 overflow-hidden"
+      style={{ clipPath: "polygon(0 0, 100% 1.5vw, 100% 100%, 0 calc(100% - 1.5vw))" }}
     >
       {/* Exquisite extremely subtle organic glowing background elements */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,rgba(255,255,255,0.015)_0%,transparent_100%)] pointer-events-none" />
@@ -60,13 +61,14 @@ export default function FinalCTA() {
             href={waLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center justify-center gap-3.5 px-8 py-5 bg-white text-black hover:bg-zinc-200 text-xs md:text-sm font-mono font-bold uppercase tracking-widest rounded-2xl transition-all shadow-[0_20px_50px_rgba(255,255,255,0.05)] cursor-pointer overflow-hidden"
+            className="group relative inline-flex items-center justify-center gap-3.5 px-8 py-5 bg-white text-black hover:bg-zinc-100 hover:rounded-3xl text-xs md:text-sm font-mono font-bold uppercase tracking-widest rounded-2xl transition-all duration-500 ease-out shadow-[0_20px_50px_rgba(255,255,255,0.05)] hover:shadow-[0_25px_60px_rgba(255,255,255,0.15)] hover:-translate-y-0.5 cursor-pointer overflow-hidden"
           >
             {/* Soft highlight slide effect on hover */}
-            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-black/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+            <span className="absolute -inset-1 bg-gradient-to-r from-zinc-200 to-white opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-3xl blur" />
             
-            <span>Agendar Reunião Gratuita</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+            <span className="relative z-10">Inicie seu projeto</span>
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300 relative z-10" />
           </a>
         </motion.div>
 

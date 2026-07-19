@@ -7,7 +7,7 @@ export default function Footer() {
   const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKEDO";
 
   return (
-    <footer id="main-footer" className="bg-black text-zinc-500 py-12 md:py-16 border-t border-white/[0.03] relative">
+    <footer id="main-footer" className="bg-[#08080a] text-zinc-500 py-16 md:py-20 border-t border-white/[0.03] relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-8 border-b border-white/[0.03] items-start">

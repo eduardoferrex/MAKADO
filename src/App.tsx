@@ -19,8 +19,11 @@ export default function App() {
   return (
     <div 
       id="makedo-app-root" 
-      className="min-h-screen bg-[#08080a] text-white selection:bg-[#ffffff] selection:text-black antialiased font-sans"
+      className="min-h-screen bg-[#08080a] text-white selection:bg-[#ffffff] selection:text-black antialiased font-sans relative overflow-x-hidden"
     >
+      {/* High-end Tactile noise texture overlay sitting above elements but passing mouse events */}
+      <div className="fixed inset-0 bg-noise pointer-events-none z-50 mix-blend-overlay opacity-80" />
+
       {/* 1. Abertura (Hero) */}
       <Hero onLearnMoreClick={handleScrollToWhatWeDo} />
 

@@ -6,7 +6,8 @@ export default function WhyItMatters() {
   return (
     <section 
       id="why-it-matters-section" 
-      className="relative bg-black text-white py-24 md:py-36 px-6 md:px-12 overflow-hidden"
+      className="relative bg-[#0c0c0e] text-white py-32 md:py-44 px-6 md:px-12 overflow-hidden"
+      style={{ clipPath: "polygon(0 0, 100% 1.5vw, 100% 100%, 0 calc(100% - 1.5vw))" }}
     >
       {/* Visual glowing accent used with absolute restraint */}
       <div className="absolute top-[40%] right-[-10%] w-[350px] h-[350px] rounded-full bg-white/[0.015] blur-[120px] pointer-events-none" />
@@ -42,7 +43,7 @@ export default function WhyItMatters() {
                   <span className="text-xs font-mono uppercase tracking-wider">A Perda Invisível</span>
                 </div>
                 <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light">
-                  Todos os dias, potenciais clientes pesquisam sobre sua empresa no Google ou chegam pelas redes sociais. Se a sua estrutura digital for lenta, amadora ou confusa, eles fecham a aba em menos de 5 segundos e compram do concorrente que parece mais confiável.
+                  Todos os dias, potenciais parceiros ou clientes buscam sua empresa online. Se a sua estrutura digital for lenta, confusa ou amadora, eles fecham a aba em segundos e compram de um concorrente que transmite mais segurança imediata.
                 </p>
               </div>
 
@@ -53,7 +54,7 @@ export default function WhyItMatters() {
                   <span className="text-xs font-mono uppercase tracking-wider">A Solução Rápida</span>
                 </div>
                 <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light">
-                  Credibilidade não é opcional, é o fator determinante para a conversão. A MAKEDO reconstrói sua imagem online with layouts modernos, seguros e extremamente rápidos. Convertemos olhares desconfiados em reuniões agendadas no seu WhatsApp comercial.
+                  Credibilidade na internet não é opcional; é o que define o seu faturamento. A MAKEDO reconstrói seu posicionamento com layouts autorais e extremamente rápidos, convertendo cliques frios em conversas ativas no seu WhatsApp.
                 </p>
               </div>
 
@@ -68,7 +69,7 @@ export default function WhyItMatters() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
                 
                 {/* Red/Amber Card (Common Legacy Models) */}
-                <div className="bg-zinc-950/40 border border-red-500/10 p-6 md:p-8 rounded-2xl relative overflow-hidden group hover:border-red-500/20 transition-all duration-300">
+                <div className="bg-zinc-950/40 border border-red-500/10 p-6 md:p-8 rounded-2xl relative overflow-hidden group hover:border-red-500/20 transition-all duration-300 md:translate-y-3">
                   <span className="text-[9px] font-mono text-red-500 uppercase tracking-widest block mb-4">
                     ● Modelos Comuns / Templates Prontos
                   </span>
@@ -119,7 +120,7 @@ export default function WhyItMatters() {
                 </div>
 
                 {/* White/Glowing Card (The MAKEDO Signature) */}
-                <div className="bg-zinc-950/80 border border-white/10 p-6 md:p-8 rounded-2xl relative overflow-hidden group hover:border-white/20 transition-all duration-300 shadow-[0_15px_40px_rgba(255,255,255,0.015)]">
+                <div className="bg-zinc-950/80 border border-white/10 p-6 md:p-8 rounded-2xl relative overflow-hidden group hover:border-white/20 transition-all duration-300 shadow-[0_15px_40px_rgba(255,255,255,0.015)] md:-translate-y-3">
                   {/* Glowing background spot */}
                   <div className="absolute -top-12 -right-12 w-24 h-24 rounded-full bg-white/[0.03] blur-xl pointer-events-none group-hover:scale-150 transition-transform duration-500" />
                   
