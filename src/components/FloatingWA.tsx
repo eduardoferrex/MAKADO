@@ -8,15 +8,16 @@ export default function FloatingWA() {
 
   useEffect(() => {
     // Show after scrolling 300px
+    let wasVisible = false;
     const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
+      const shouldBeVisible = window.scrollY > 300;
+      if (shouldBeVisible !== wasVisible) {
+        wasVisible = shouldBeVisible;
+        setIsVisible(shouldBeVisible);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     
     // Show initial tooltip after 5 seconds
     const timer = setTimeout(() => {

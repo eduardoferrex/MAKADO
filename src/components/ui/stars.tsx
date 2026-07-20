@@ -72,8 +72,6 @@ export function StarsBackground({
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
-        ctx.shadowBlur = star.size * 2;
-        ctx.shadowColor = "rgba(255, 255, 255, 0.4)";
         ctx.fill();
       });
 

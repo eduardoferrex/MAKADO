@@ -28,10 +28,14 @@ export default function SmoothScroll({ children }: SmoothScrollProps) {
   useEffect(() => {
     if (isMobile || !contentRef.current) return;
     
+    let frameId: number;
     const handleResize = () => {
-      if (contentRef.current) {
-        setContentHeight(contentRef.current.scrollHeight);
-      }
+      if (frameId) cancelAnimationFrame(frameId);
+      frameId = requestAnimationFrame(() => {
+        if (contentRef.current) {
+          setContentHeight(contentRef.current.scrollHeight);
+        }
+      });
     };
     
     // Initial calculation
@@ -42,10 +46,11 @@ export default function SmoothScroll({ children }: SmoothScrollProps) {
     resizeObserver.observe(contentRef.current);
     
     // Fallbacks
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize, { passive: true });
     window.addEventListener("load", handleResize);
     
     return () => {
+      if (frameId) cancelAnimationFrame(frameId);
       resizeObserver.disconnect();
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("load", handleResize);
