@@ -45,9 +45,9 @@ export default function FloatingWA() {
                   initial={{ opacity: 0, y: 10, scale: 0.9 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
-                  className="bg-zinc-950 border border-zinc-900 text-white text-xs py-2.5 px-4 rounded-xl shadow-2xl mb-3 max-w-[200px] text-right relative"
+                  className="bg-zinc-950 border border-zinc-900 text-white text-xs py-2.5 px-4 rounded-xl shadow-lg mb-3 max-w-[200px] text-right relative"
                 >
-                  <p className="font-medium text-white mb-0.5">Dúvidas? Fale conosco!</p>
+                  <p className="font-bold text-white mb-0.5">Dúvidas? Fale conosco!</p>
                   <p className="text-[10px] text-zinc-400">Agende sua reunião gratuita em 1 minuto.</p>
                   <button 
                     onClick={() => setShowTooltip(false)}
@@ -70,10 +70,10 @@ export default function FloatingWA() {
               exit={{ scale: 0, rotate: 45 }}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="relative flex items-center justify-center w-14 h-14 bg-white text-black rounded-full shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all cursor-pointer group"
+              className="relative flex items-center justify-center w-14 h-14 bg-zinc-900 text-white rounded-full shadow-lg hover:shadow-xl hover:bg-zinc-800 transition-all cursor-pointer group border border-zinc-800"
               onMouseEnter={() => setShowTooltip(true)}
             >
-              <MessageSquare className="w-6 h-6 fill-black text-black group-hover:rotate-12 transition-transform duration-300" />
+              <MessageSquare className="w-6 h-6 fill-white text-white group-hover:rotate-12 transition-transform duration-300" />
               
               {/* Pulse ring */}
               <span className="absolute inset-0 rounded-full bg-white opacity-20 animate-ping -z-10" />

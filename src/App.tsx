@@ -1,71 +1,63 @@
 import React, { useState } from "react";
+import Header from "./components/Header";
 import Hero from "./components/Hero";
-import WhatWeDo from "./components/WhatWeDo";
-import WhyItMatters from "./components/WhyItMatters";
-import FreeMeeting from "./components/FreeMeeting";
+import About from "./components/About";
+import Services from "./components/Services";
+import Portfolio from "./components/Portfolio";
 import FAQ from "./components/FAQ";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
 import FloatingWA from "./components/FloatingWA";
 import EntranceLoader from "./components/EntranceLoader";
 import { AnimatePresence } from "motion/react";
-import { StarsBackground } from "@/components/ui/stars";
 import SmoothScroll from "./components/SmoothScroll";
 
 export default function App() {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Smooth scroll handler to scroll past the hero section
-  const handleScrollToWhatWeDo = () => {
-    const section = document.getElementById("what-we-do-section");
-    if (section) {
-      const rect = section.getBoundingClientRect();
-      const targetY = rect.top + window.scrollY;
-      window.scrollTo({ top: targetY, behavior: "smooth" });
-    }
-  };
-
   return (
     <>
+      {/* 1. Loader overlay */}
       <AnimatePresence mode="wait">
         {!isLoaded && (
           <EntranceLoader key="loader" onComplete={() => setIsLoaded(true)} />
         )}
       </AnimatePresence>
 
-      <StarsBackground 
-        className="min-h-screen bg-[#050507] text-white selection:bg-[#ffffff] selection:text-black antialiased font-sans relative overflow-x-hidden"
-        starCount={180}
-      >
-        {/* High-end Tactile noise texture overlay sitting above elements but passing mouse events */}
+      <div className="min-h-screen bg-white text-zinc-900 selection:bg-zinc-900 selection:text-white antialiased font-sans relative overflow-x-hidden">
+        {/* Subtle noise pattern across the site */}
         <div className="fixed inset-0 bg-noise pointer-events-none z-50 mix-blend-overlay opacity-80" />
 
+        {/* 2. Fixed sticky header (placed outside of SmoothScroll so it is viewport-fixed) */}
+        <Header />
+
+        {/* 3. Smooth inert scroll wrapper */}
         <SmoothScroll>
-          {/* 1. Abertura (Hero) */}
-          <Hero onLearnMoreClick={handleScrollToWhatWeDo} />
+          {/* Hero Section */}
+          <Hero />
 
-          {/* 2. O que a MAKADO faz */}
-          <WhatWeDo />
+          {/* About Section (Sobre a MAKEDO) */}
+          <About />
 
-          {/* 3. Por que isso importa */}
-          <WhyItMatters />
+          {/* Services Section (Serviços) */}
+          <Services />
 
-          {/* 4. Como funciona a reunião gratuita */}
-          <FreeMeeting />
+          {/* Portfolio Section */}
+          <Portfolio />
 
-          {/* 5. Perguntas Frequentes */}
+          {/* FAQ Section */}
           <FAQ />
 
-          {/* 6. Chamada final */}
+          {/* Final CTA */}
           <FinalCTA />
 
-          {/* 7. Rodapé */}
+          {/* Rodapé (Footer) */}
           <Footer />
         </SmoothScroll>
 
         {/* Persistent Floating Support Trigger */}
         <FloatingWA />
-      </StarsBackground>
+      </div>
     </>
   );
 }

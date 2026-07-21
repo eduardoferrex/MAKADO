@@ -22,7 +22,7 @@ export default function OfficialLogo({ className = "", size = 48, animate = true
       <svg
         viewBox="0 0 100 100"
         fill="currentColor"
-        className="text-white w-full h-full select-none"
+        className="w-full h-full select-none"
       >
         {/* Upper Left Blade/Wing */}
         <motion.path

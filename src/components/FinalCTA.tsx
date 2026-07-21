@@ -1,74 +1,79 @@
 import React from "react";
-import { ArrowRight, Sparkles, AlertTriangle, ShieldCheck } from "lucide-react";
 import { motion } from "motion/react";
-import MagneticButton from "./MagneticButton";
+import { ArrowRight, Sparkles, CheckCircle } from "lucide-react";
 
 export default function FinalCTA() {
-  const waLink = "https://wa.me/5534998195551?text=Ol%C3%A1!%20Quero%20agendar%20minha%20reuni%C3%A3o%20gratuita%20com%20a%20MAKADO";
+  const waLink = "https://wa.me/5534998195551?text=Olá!%20Gostaria%20de%20iniciar%20um%20projeto%20com%20a%20MAKEDO.";
+
+  const items = [
+    "Design 100% Autoral (Sem Cópias)",
+    "Código Limpo Otimizado para SEO",
+    "Suporte Direto com os Devs",
+    "Entrega em Tempo Recorde"
+  ];
 
   return (
-    <section 
-      id="final-cta-section" 
-      className="relative bg-[#050507] text-white py-24 md:py-28 px-6 md:px-12 overflow-hidden border-t border-white/[0.02]"
-    >
-      {/* Background soft lighting effects with zinc glow */}
-      <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-zinc-500/[0.015] rounded-full blur-[140px] pointer-events-none" />
+    <section id="contato" className="relative py-32 bg-black text-white overflow-hidden border-t border-zinc-900">
+      {/* Background patterns */}
+      <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none opacity-[0.04]" />
+      
+      {/* Subtle light leak for elegant touch */}
+      <div className="absolute -top-1/2 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-white/[0.03] rounded-full blur-[140px] pointer-events-none" />
 
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="max-w-4xl mx-auto text-center relative z-10"
-      >
-        
-        {/* Urgent Warning/Metric Tag */}
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 mb-6 shadow-[0_0_15px_rgba(255,255,255,0.02)]">
-          <AlertTriangle className="w-3.5 h-3.5 text-zinc-400 animate-pulse" />
-          <span className="text-[9px] font-mono text-zinc-300 uppercase tracking-[0.2em]">
-            Alerta: Pare de perder dinheiro com anúncios enviando pessoas para sites lentos
-          </span>
-        </div>
-
-        {/* Big CTA Headline */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-light leading-[1.1] tracking-tight mb-6">
-          Sua empresa merece um <span className="font-extrabold bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">visual profissional</span> na internet.
-        </h2>
-
-        {/* Core Subtitle */}
-        <p className="text-zinc-400 text-xs md:text-sm font-light max-w-xl mx-auto leading-relaxed mb-10">
-          Não perca mais clientes para concorrentes que têm uma imagem melhor. Tenha um site rápido, bonito e que traz novos contatos para você todos os dias.
-        </p>
-
-        {/* Call to Action Premium Buttons */}
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 max-w-xs mx-auto">
-          <MagneticButton 
-            href={waLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative px-8 py-4.5 rounded-full bg-white text-black font-semibold text-xs uppercase tracking-widest transition-all duration-300 flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(255,255,255,0.05)] hover:bg-zinc-200 border border-white cursor-pointer w-full"
-          >
-            <span className="flex items-center justify-center gap-3">
-              <span>Quero Meu Site Profissional</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+      <div className="max-w-5xl mx-auto px-6 md:px-12 relative z-10 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="space-y-8"
+        >
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
+            <Sparkles className="w-3.5 h-3.5 text-zinc-300" />
+            <span className="text-[10px] font-bold font-mono text-zinc-300 uppercase tracking-widest">
+              AGENDE HOJE MESMO
             </span>
-          </MagneticButton>
-        </div>
-
-        {/* Security & Authenticity guarantees banner */}
-        <div className="mt-12 flex items-center justify-center gap-6 text-[9px] font-mono text-zinc-500 uppercase tracking-widest border-t border-white/[0.03] pt-10 max-w-xl mx-auto">
-          <div className="flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-zinc-500" />
-            <span>Site Criado do Zero</span>
           </div>
-          <div className="h-3 w-[1px] bg-white/5" />
-          <div className="flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-zinc-500" />
-            <span>100% Seguro e Protegido</span>
-          </div>
-        </div>
 
-      </motion.div>
+          {/* Main Title */}
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] max-w-3xl mx-auto">
+            Pronto para elevar a imagem do seu negócio?
+          </h2>
+
+          {/* Subtitle */}
+          <p className="text-zinc-400 text-base sm:text-xl max-w-2xl mx-auto leading-relaxed">
+            Seu próximo cliente vai julgar sua empresa pelo seu site. Não deixe uma primeira impressão amadora afastar vendas valiosas.
+          </p>
+
+          {/* Core Commitments checklist */}
+          <div className="flex flex-wrap items-center justify-center gap-6 pt-4 max-w-2xl mx-auto">
+            {items.map((item, idx) => (
+              <div key={idx} className="flex items-center gap-2 text-zinc-300 font-mono text-xs uppercase tracking-wide">
+                <CheckCircle className="w-4 h-4 text-white shrink-0" />
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Big CTA Button */}
+          <div className="pt-6">
+            <a
+              href={waLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-white text-zinc-950 font-extrabold text-base tracking-wide hover:bg-zinc-200 transition-all duration-300 shadow-[0_10px_40px_rgba(255,255,255,0.06)] hover:shadow-[0_15px_50px_rgba(255,255,255,0.12)] hover:-translate-y-0.5 active:translate-y-0"
+            >
+              <span>Iniciar Meu Projeto</span>
+              <ArrowRight className="w-5 h-5 text-zinc-950" />
+            </a>
+          </div>
+
+          <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest pt-2">
+            // PRIMEIRA REUNIÃO DE ALINHAMENTO COMPLEMENTAR
+          </p>
+        </motion.div>
+      </div>
     </section>
   );
 }
