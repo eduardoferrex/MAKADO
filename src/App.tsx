@@ -24,7 +24,7 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      <div className="min-h-screen bg-white text-zinc-900 selection:bg-zinc-900 selection:text-white antialiased font-sans relative overflow-x-hidden">
+      <div className="min-h-screen bg-black text-white selection:bg-zinc-800 selection:text-white antialiased font-sans relative overflow-x-hidden">
         {/* Subtle noise pattern across the site */}
         <div className="fixed inset-0 bg-noise pointer-events-none z-50 mix-blend-overlay opacity-80" />
 
@@ -36,7 +36,7 @@ export default function App() {
           {/* Hero Section */}
           <Hero />
 
-          {/* About Section (Sobre a MAKEDO) */}
+          {/* About Section (Sobre a MAKADO) */}
           <About />
 
           {/* Services Section (Serviços) */}

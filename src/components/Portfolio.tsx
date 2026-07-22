@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { Eye, ArrowUpRight, Laptop, Tablet, Smartphone, Code, ShieldCheck } from "lucide-react";
 
 export default function Portfolio() {
-  const waLink = "https://wa.me/5534998195551?text=Olá!%20Vi%20o%20portfólio%20da%20MAKEDO%20e%20gostaria%20de%20criar%20um%20projeto.";
+  const waLink = "https://wa.me/5534998195551?text=Olá!%20Vi%20o%20portfólio%20da%20MAKADO%20e%20gostaria%20de%20criar%20um%20projeto.";
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -22,9 +22,7 @@ export default function Portfolio() {
       opacity: 1,
       transition: { duration: 0.8, ease: [0.25, 1, 0.5, 1] },
     },
-  };
-
-  const cases = [
+  };  const cases = [
     {
       title: "Fintech Nexo",
       category: "Sistema Web & Dashboard",
@@ -32,6 +30,7 @@ export default function Portfolio() {
       techStack: ["React", "TypeScript", "Tailwind", "D3.js"],
       mockupBg: "bg-zinc-950",
       stats: { metric: "Tempo de carregamento", value: "0.2s" },
+      url: "https://nexo.makado.app",
       illustration: (
         <div className="w-full h-full flex flex-col justify-between p-4 font-mono text-[9px] text-zinc-400">
           <div className="flex items-center justify-between border-b border-zinc-900 pb-2">
@@ -68,6 +67,7 @@ export default function Portfolio() {
       techStack: ["Vite", "Tailwind", "Framer Motion", "WhatsApp API"],
       mockupBg: "bg-zinc-900/50",
       stats: { metric: "Conversão de tráfego", value: "7.8%" },
+      url: "https://vitta.makado.app",
       illustration: (
         <div className="w-full h-full flex flex-col justify-between p-4 font-mono text-[9px] text-zinc-400">
           <div className="flex items-center justify-between">
@@ -89,33 +89,29 @@ export default function Portfolio() {
       )
     },
     {
-      title: "Prime Imobiliária",
-      category: "Catálogo de Imóveis de Luxo",
-      description: "Portal imobiliário de alta conversão, com filtros ultrarrápidos, visualizações estonteantes e área administrativa intuitiva.",
-      techStack: ["React", "TypeScript", "Node.js", "Algolia Search"],
-      mockupBg: "bg-zinc-900/40",
-      stats: { metric: "Busca em tempo de", value: "3ms" },
+      title: "Pablo Liberato",
+      category: "Visagismo & Barbearia de Luxo",
+      description: "Website autoral para barbeiro visagista de elite, projetado para destacar serviços premium, atrair clientes de alto valor e automatizar agendamentos online.",
+      techStack: ["Next.js", "React", "Framer Motion", "Tailwind"],
+      mockupBg: "bg-zinc-900/45",
+      stats: { metric: "Ocupação de Agenda", value: "96%" },
+      url: "https://pabloliberato.vercel.app",
       illustration: (
         <div className="w-full h-full flex flex-col justify-between p-4 font-mono text-[9px] text-zinc-400">
           <div className="flex items-center justify-between border-b border-zinc-900 pb-1.5">
-            <span className="font-bold text-zinc-200">PRIME // ESTATE</span>
-            <span className="text-zinc-500 text-[8px]">LUXO</span>
+            <span className="font-bold text-zinc-200">PABLO LIBERATO</span>
+            <span className="text-zinc-550 text-[8px]">ESTILO DE ELITE</span>
           </div>
-          <div className="grid grid-cols-2 gap-2.5 flex-grow py-3">
-            <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-1.5 shadow-sm space-y-1.5 flex flex-col justify-between">
-              <div className="bg-zinc-950 h-10 rounded-md flex items-center justify-center text-[8px] text-zinc-500">IMÓVEL 01</div>
-              <div className="space-y-0.5">
-                <span className="font-bold text-white">R$ 4.5M</span>
-                <span className="text-[7px] text-zinc-500 block">Jardins</span>
-              </div>
+          <div className="flex flex-col justify-center items-center flex-grow py-3 text-center space-y-2">
+            <span className="font-serif italic text-lg text-white leading-none tracking-tight">P. Liberato</span>
+            <p className="text-[7px] text-zinc-500 uppercase tracking-widest">Visagismo & Barbearia Premium</p>
+            <div className="bg-white/10 border border-white/20 rounded-full py-0.5 px-2.5 text-[6.5px] font-sans font-bold text-white shadow-sm">
+              Agendar Horário
             </div>
-            <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-1.5 shadow-sm space-y-1.5 flex flex-col justify-between">
-              <div className="bg-zinc-955 h-10 rounded-md flex items-center justify-center text-[8px] text-zinc-500">IMÓVEL 02</div>
-              <div className="space-y-0.5">
-                <span className="font-bold text-white">R$ 8.2M</span>
-                <span className="text-[7px] text-zinc-500 block">Itaim</span>
-              </div>
-            </div>
+          </div>
+          <div className="flex justify-between items-center text-[7px] text-zinc-500 border-t border-zinc-900 pt-1.5">
+            <span>EXPERIÊNCIA EXCLUSIVA</span>
+            <span>2026 ©</span>
           </div>
         </div>
       )
@@ -165,7 +161,7 @@ export default function Portfolio() {
                     <span className="w-1.5 h-1.5 rounded-full bg-zinc-700" />
                     <span className="w-1.5 h-1.5 rounded-full bg-zinc-600" />
                     <div className="bg-zinc-950/80 border border-zinc-900 text-[7px] text-zinc-500 px-3 py-0.5 rounded-md ml-2 flex-grow text-center font-mono select-none">
-                      https://makedo.dev/{cs.title.toLowerCase().replace(" ", "-")}
+                      {cs.url}
                     </div>
                   </div>
 
@@ -208,11 +204,11 @@ export default function Portfolio() {
                 </div>
                 
                 <a
-                  href={waLink}
+                  href={cs.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-1.5 rounded-full bg-white text-zinc-950 hover:bg-zinc-200 transition-all duration-200 group-hover:scale-105"
-                  title="Ver Detalhes no WhatsApp"
+                  title={`Acessar ${cs.title}`}
                 >
                   <ArrowUpRight className="w-4 h-4" />
                 </a>

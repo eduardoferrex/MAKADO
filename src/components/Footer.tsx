@@ -3,7 +3,7 @@ import OfficialLogo from "./OfficialLogo";
 import { Instagram, MessageCircle, Mail, Phone, ExternalLink } from "lucide-react";
 
 export default function Footer() {
-  const waLink = "https://wa.me/5534998195551?text=Olá!%20Gostaria%20de%20conversar%20sobre%20as%20soluções%20da%20MAKEDO.";
+  const waLink = "https://wa.me/5534998195551?text=Olá!%20Gostaria%20de%20conversar%20sobre%20as%20soluções%20da%20MAKADO.";
   const instaLink = "https://instagram.com/makado.br";
 
   const quickLinks = [
@@ -25,7 +25,7 @@ export default function Footer() {
               <OfficialLogo size={24} animate={false} className="text-white" />
             </div>
             <span className="font-sans font-black text-xl tracking-wider text-white">
-              MAKEDO
+              MAKADO
             </span>
           </div>
           
@@ -103,7 +103,7 @@ export default function Footer() {
 
       {/* Copyright Line */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 mt-16 pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
-        <p>© 2026 MAKEDO. Todos os direitos reservados.</p>
+        <p>© 2026 MAKADO. Todos os direitos reservados.</p>
         <div className="flex gap-4">
           <span className="hover:text-zinc-300 cursor-default">Termos de Uso</span>
           <span>·</span>

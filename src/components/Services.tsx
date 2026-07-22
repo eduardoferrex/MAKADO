@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { Monitor, Cpu, Server, Check, ArrowUpRight } from "lucide-react";
 
 export default function Services() {
-  const waLink = "https://wa.me/5534998195551?text=Olá!%20Gostaria%20de%20conversar%20sobre%20as%20soluções%20da%20MAKEDO.";
+  const waLink = "https://wa.me/5534998195551?text=Olá!%20Gostaria%20de%20conversar%20sobre%20as%20soluções%20da%20MAKADO.";
 
   const containerVariants = {
     hidden: { opacity: 0 },

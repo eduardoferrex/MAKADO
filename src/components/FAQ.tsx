@@ -7,7 +7,7 @@ export default function FAQ() {
 
   const faqs = [
     {
-      q: "Como funciona o desenvolvimento de um site personalizado com a MAKEDO?",
+      q: "Como funciona o desenvolvimento de um site personalizado com a MAKADO?",
       a: "Tudo começa com um diagnóstico gratuito para entender os gargalos e objetivos do seu negócio. Em seguida, criamos um protótipo exclusivo focado no seu público-alvo. Após a aprovação do design, codificamos o site do zero com tecnologias modernas de alto desempenho (React/Vite) para garantir que seja absurdamente rápido e responsivo."
     },
     {
@@ -23,7 +23,7 @@ export default function FAQ() {
       a: "Cuidamos de tudo! Nós configuramos seu domínio, e-mails corporativos profissionais, certificado de segurança SSL e hospedamos seu site em servidores cloud de alta performance. Você não precisa se preocupar com nenhuma burocracia técnica."
     },
     {
-      q: "Como o site da MAKEDO ajuda na minha campanha de tráfego pago (Google/Meta)?",
+      q: "Como o site da MAKADO ajuda na minha campanha de tráfego pago (Google/Meta)?",
       a: "O tráfego pago atrai pessoas, mas o site decide se elas compram ou vão embora. Nossos sites carregam em milissegundos e têm copywriting focado em persuasão e conversão, o que diminui drasticamente o custo por lead (CPL) e multiplica o retorno sobre o investimento (ROI) da sua empresa."
     }
   ];

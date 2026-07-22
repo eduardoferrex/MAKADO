@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { ArrowRight, Sparkles, CheckCircle } from "lucide-react";
 
 export default function FinalCTA() {
-  const waLink = "https://wa.me/5534998195551?text=Olá!%20Gostaria%20de%20iniciar%20um%20projeto%20com%20a%20MAKEDO.";
+  const waLink = "https://wa.me/5534998195551?text=Olá!%20Gostaria%20de%20iniciar%20um%20projeto%20com%20a%20MAKADO.";
 
   const items = [
     "Design 100% Autoral (Sem Cópias)",

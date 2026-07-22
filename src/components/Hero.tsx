@@ -4,7 +4,7 @@ import TypewriterLoop from "@/components/ui/typewriter-loop";
 import { ArrowRight, CheckCircle2, Zap, Shield, TrendingUp } from "lucide-react";
 
 export default function Hero() {
-  const waLink = "https://wa.me/5534998195551?text=Olá!%20Gostaria%20de%20agendar%20uma%20reunião%20gratuita%20para%20conhecer%20as%20soluções%20da%20MAKEDO.";
+  const waLink = "https://wa.me/5534998195551?text=Olá!%20Gostaria%20de%20agendar%20uma%20reunião%20gratuita%20para%20conhecer%20as%20soluções%20da%20MAKADO.";
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -61,7 +61,7 @@ export default function Hero() {
           <motion.div variants={itemVariants} className="w-full flex justify-start">
             <div className="bg-zinc-950/40 backdrop-blur-sm border border-zinc-900/60 rounded-3xl p-6 shadow-sm w-full">
               <TypewriterLoop
-                LeadText="MAKEDO"
+                LeadText="MAKADO"
                 morphingText={["Websites", "Sistemas", "Estruturas"]}
               />
             </div>
@@ -159,7 +159,7 @@ export default function Hero() {
                   <span className="w-3 h-3 rounded-full bg-zinc-650" />
                 </div>
                 <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest pl-2">
-                  MAKEDO.APP
+                  MAKADO.APP
                 </span>
               </div>
               <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider font-semibold">
@@ -172,15 +172,15 @@ export default function Hero() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-4 bg-zinc-900/40 border border-zinc-900 rounded-2xl text-center space-y-1.5">
                   <span className="text-[9px] font-bold font-mono text-zinc-500 uppercase tracking-wider block">
-                    Nota Google
+                    Taxa de Conversão
                   </span>
                   <span className="text-3xl font-extrabold text-white tracking-tight block">
-                    100%
+                    12.8%
                   </span>
                   <div className="w-full bg-zinc-800 h-1.5 rounded-full overflow-hidden">
                     <motion.div
                       initial={{ width: 0 }}
-                      animate={{ width: "100%" }}
+                      animate={{ width: "88%" }}
                       transition={{ duration: 1.2, delay: 0.5 }}
                       className="h-full bg-white"
                     />
@@ -189,17 +189,17 @@ export default function Hero() {
 
                 <div className="p-4 bg-zinc-900/40 border border-zinc-900 rounded-2xl text-center space-y-1.5">
                   <span className="text-[9px] font-bold font-mono text-zinc-500 uppercase tracking-wider block">
-                    Taxa Rejeição
+                    Abertura de Página
                   </span>
                   <span className="text-3xl font-extrabold text-zinc-200 tracking-tight block">
-                    &lt; 2%
+                    0.4s
                   </span>
                   <div className="w-full bg-zinc-800 h-1.5 rounded-full overflow-hidden">
                     <motion.div
-                      initial={{ width: "100%" }}
-                      animate={{ width: "1.8%" }}
+                      initial={{ width: 0 }}
+                      animate={{ width: "100%" }}
                       transition={{ duration: 1.2, delay: 0.5 }}
-                      className="h-full bg-zinc-550"
+                      className="h-full bg-white"
                     />
                   </div>
                 </div>
@@ -236,7 +236,7 @@ export default function Hero() {
 
                   <div className="space-y-1">
                     <div className="flex justify-between text-[10px] font-bold font-mono text-zinc-300">
-                      <span>SITES MAKEDO</span>
+                      <span>SITES MAKADO</span>
                       <span className="font-extrabold text-white">5.4%</span>
                     </div>
                     <div className="w-full bg-zinc-800 h-2 rounded-full overflow-hidden">

@@ -31,7 +31,7 @@ export default function Header() {
     }
   };
 
-  const waLink = "https://wa.me/5534998195551?text=Olá!%20Gostaria%20de%20iniciar%20um%20projeto%20com%20a%20MAKEDO.";
+  const waLink = "https://wa.me/5534998195551?text=Olá!%20Gostaria%20de%20iniciar%20um%20projeto%20com%20a%20MAKADO.";
 
   return (
     <header
@@ -42,7 +42,7 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-        {/* Logo MAKEDO */}
+        {/* Logo MAKADO */}
         <a 
           href="#inicio" 
           onClick={(e) => handleLinkClick(e as any, "#inicio")}
@@ -52,7 +52,7 @@ export default function Header() {
             <OfficialLogo size={24} animate={false} className="text-white" />
           </div>
           <span className="font-sans font-black text-xl tracking-wider text-white group-hover:text-zinc-400 transition-colors">
-            MAKEDO
+            MAKADO
           </span>
         </a>
 

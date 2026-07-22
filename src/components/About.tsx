@@ -69,7 +69,7 @@ export default function About() {
 
             <motion.div variants={itemVariants} className="space-y-6 text-zinc-400 max-w-2xl text-base sm:text-lg leading-relaxed">
               <p>
-                A <strong>MAKEDO</strong> é uma agência de tecnologia boutique dedicada à criação de sites, landing pages de altíssima conversão e sistemas inteligentes sob medida. Nós não fazemos sites genéricos em construtores visuais pesados; cada linha de código é esculpida para garantir velocidade inacreditável e design estonteante.
+                A <strong>MAKADO</strong> é uma agência de tecnologia boutique dedicada à criação de sites, landing pages de altíssima conversão e sistemas inteligentes sob medida. Nós não fazemos sites genéricos em construtores visuais pesados; cada linha de código é esculpida para garantir velocidade inacreditável e design estonteante.
               </p>
               <p>
                 Acreditamos que a presença online é a vitrine mais valiosa do seu negócio. Por isso, aliamos design minimalista, UX avançada e estabilidade de nível empresarial para posicionar sua marca no topo do seu mercado.
