@@ -20,7 +20,7 @@ export default function OfficialLogo({ className = "", size = 48, animate = true
   return (
     <div className={`relative flex items-center justify-center ${className}`} style={{ width: size, height: size }}>
       <svg
-        viewBox="0 0 100 100"
+        viewBox="26 23 48 52"
         fill="currentColor"
         className="w-full h-full select-none"
       >

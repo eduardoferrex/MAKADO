@@ -52,8 +52,8 @@ export default function Header() {
           onClick={(e) => handleLinkClick(e as any, "#inicio")}
           className="flex items-center gap-3 group focus:outline-none"
         >
-          <div className="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-            <OfficialLogo size={24} animate={false} className="text-white" />
+          <div className="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center transition-transform duration-300 group-hover:scale-105 overflow-hidden">
+            <OfficialLogo size={26} animate={false} className="text-white" />
           </div>
           <span className="font-sans font-black text-xl tracking-wider text-white group-hover:text-zinc-400 transition-colors">
             MAKADO

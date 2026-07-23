@@ -21,8 +21,8 @@ export default function Footer() {
         {/* Brand & Social Column */}
         <div className="md:col-span-5 space-y-6">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center">
-              <OfficialLogo size={24} animate={false} className="text-white" />
+            <div className="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center overflow-hidden">
+              <OfficialLogo size={26} animate={false} className="text-white" />
             </div>
             <span className="font-sans font-black text-xl tracking-wider text-white">
               MAKADO
