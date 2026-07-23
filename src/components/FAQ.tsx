@@ -29,7 +29,7 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="relative py-28 bg-black overflow-hidden border-b border-zinc-900">
+    <section id="faq" className="relative py-28 bg-transparent overflow-hidden border-b border-zinc-900/60">
       <div className="max-w-4xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Header */}

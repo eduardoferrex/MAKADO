@@ -47,7 +47,7 @@ export default function About() {
   ];
 
   return (
-    <section id="sobre" className="relative py-28 bg-black overflow-hidden border-t border-zinc-900">
+    <section id="sobre" className="relative py-28 bg-transparent overflow-hidden border-t border-zinc-900/60">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <motion.div 
           initial="hidden"

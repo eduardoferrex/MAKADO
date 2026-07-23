@@ -13,7 +13,7 @@ export default function FinalCTA() {
   ];
 
   return (
-    <section id="contato" className="relative py-32 bg-black text-white overflow-hidden border-t border-zinc-900">
+    <section id="contato" className="relative py-32 bg-transparent text-white overflow-hidden border-t border-zinc-900/60">
       {/* Background patterns */}
       <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none opacity-[0.04]" />
       

@@ -67,7 +67,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="servicos" className="relative py-28 bg-black overflow-hidden border-t border-b border-zinc-900">
+    <section id="servicos" className="relative py-28 bg-transparent overflow-hidden border-t border-b border-zinc-900/60">
       <div className="absolute inset-0 bg-[radial-gradient(#27272a_1px,transparent_1px)] bg-[size:2rem_2rem] pointer-events-none opacity-30" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">

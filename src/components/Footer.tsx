@@ -15,7 +15,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-black border-t border-zinc-900 py-16 text-zinc-400 font-sans">
+    <footer className="bg-transparent border-t border-zinc-900/60 py-16 text-zinc-400 font-sans">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
         
         {/* Brand & Social Column */}

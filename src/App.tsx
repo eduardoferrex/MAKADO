@@ -40,32 +40,32 @@ export default function App() {
         <SmoothScroll>
           <div className="relative z-10 flex flex-col w-full">
             {/* Section 1: Hero */}
-            <SectionTransition id="inicio" showDivider={false}>
+            <SectionTransition id="inicio" showDivider={false} accentShape="ring">
               <Hero />
             </SectionTransition>
 
             {/* Section 2: About (Sobre) */}
-            <SectionTransition id="sobre">
+            <SectionTransition id="sobre" accentShape="square">
               <About />
             </SectionTransition>
 
             {/* Section 3: Services (Serviços) */}
-            <SectionTransition id="servicos">
+            <SectionTransition id="servicos" accentShape="circle">
               <Services />
             </SectionTransition>
 
             {/* Section 4: Portfolio */}
-            <SectionTransition id="portfolio">
+            <SectionTransition id="portfolio" accentShape="dots">
               <Portfolio />
             </SectionTransition>
 
             {/* Section 5: FAQ */}
-            <SectionTransition id="faq">
+            <SectionTransition id="faq" accentShape="ring">
               <FAQ />
             </SectionTransition>
 
             {/* Section 6: Final CTA + Footer */}
-            <SectionTransition id="contato">
+            <SectionTransition id="contato" accentShape="square">
               <FinalCTA />
             </SectionTransition>
 
