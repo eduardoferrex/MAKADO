@@ -9,8 +9,10 @@ import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
 import FloatingWA from "./components/FloatingWA";
 import EntranceLoader from "./components/EntranceLoader";
-import { AnimatePresence } from "motion/react";
+import AnimatedBackground from "./components/AnimatedBackground";
 import SmoothScroll from "./components/SmoothScroll";
+import SectionTransition from "./components/SectionTransition";
+import { AnimatePresence } from "motion/react";
 
 export default function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -24,35 +26,52 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      <div className="min-h-screen bg-black text-white selection:bg-zinc-800 selection:text-white antialiased font-sans relative overflow-x-hidden">
-        {/* Subtle noise pattern across the site */}
+      <div className="min-h-screen w-full bg-black text-white selection:bg-zinc-800 selection:text-white antialiased font-sans relative overflow-x-hidden">
+        {/* Subtle noise overlay */}
         <div className="fixed inset-0 bg-noise pointer-events-none z-50 mix-blend-overlay opacity-80" />
 
-        {/* 2. Fixed sticky header (placed outside of SmoothScroll so it is viewport-fixed) */}
+        {/* Dynamic Animated Background with particles, moving light orbs and sine waves */}
+        <AnimatedBackground />
+
+        {/* 2. Fixed sticky header */}
         <Header />
 
-        {/* 3. Smooth inert scroll wrapper */}
+        {/* 3. Smooth Lenis Scroll Container */}
         <SmoothScroll>
-          {/* Hero Section */}
-          <Hero />
+          <div className="relative z-10 flex flex-col w-full">
+            {/* Section 1: Hero */}
+            <SectionTransition id="inicio" showDivider={false}>
+              <Hero />
+            </SectionTransition>
 
-          {/* About Section (Sobre a MAKADO) */}
-          <About />
+            {/* Section 2: About (Sobre) */}
+            <SectionTransition id="sobre">
+              <About />
+            </SectionTransition>
 
-          {/* Services Section (Serviços) */}
-          <Services />
+            {/* Section 3: Services (Serviços) */}
+            <SectionTransition id="servicos">
+              <Services />
+            </SectionTransition>
 
-          {/* Portfolio Section */}
-          <Portfolio />
+            {/* Section 4: Portfolio */}
+            <SectionTransition id="portfolio">
+              <Portfolio />
+            </SectionTransition>
 
-          {/* FAQ Section */}
-          <FAQ />
+            {/* Section 5: FAQ */}
+            <SectionTransition id="faq">
+              <FAQ />
+            </SectionTransition>
 
-          {/* Final CTA */}
-          <FinalCTA />
+            {/* Section 6: Final CTA + Footer */}
+            <SectionTransition id="contato">
+              <FinalCTA />
+            </SectionTransition>
 
-          {/* Rodapé (Footer) */}
-          <Footer />
+            {/* Footer */}
+            <Footer />
+          </div>
         </SmoothScroll>
 
         {/* Persistent Floating Support Trigger */}

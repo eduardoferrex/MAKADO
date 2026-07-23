@@ -25,9 +25,13 @@ export default function Header() {
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     setIsOpen(false);
-    if (href === "#inicio") {
+    if (href.startsWith("#")) {
       e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      const targetId = href.replace("#", "");
+      const el = document.getElementById(targetId);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
   };
 
