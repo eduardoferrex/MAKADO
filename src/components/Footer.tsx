@@ -30,7 +30,7 @@ export default function Footer() {
           </div>
           
           <p className="text-sm text-zinc-400 max-w-sm leading-relaxed">
-            Desenvolvimento de sites profissionais, landing pages de alta conversão e sistemas inteligentes sob medida para destacar e impulsionar o seu negócio.
+            Criação de sites profissionais, landing pages estratégicas e estruturas de vendas integradas para destacar e impulsionar o seu negócio.
           </p>
 
           {/* Social Icons Links */}

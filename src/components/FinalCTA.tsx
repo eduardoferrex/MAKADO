@@ -38,12 +38,12 @@ export default function FinalCTA() {
 
           {/* Main Title */}
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] max-w-3xl mx-auto">
-            Pronto para elevar a imagem do seu negócio?
+            Pronto para transformar seu site em uma <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-zinc-400">máquina de novos clientes</span>?
           </h2>
 
           {/* Subtitle */}
           <p className="text-zinc-400 text-base sm:text-xl max-w-2xl mx-auto leading-relaxed">
-            Seu próximo cliente vai julgar sua empresa pelo seu site. Não deixe uma primeira impressão amadora afastar vendas valiosas.
+            Agende uma sessão estratégica de 20 minutos com nossos especialistas. Vamos analisar a sua estrutura digital atual e apresentar o diagnóstico com o <strong>Método Tração MAKADO®</strong>.
           </p>
 
           {/* Core Commitments checklist */}

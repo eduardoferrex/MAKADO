@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
+import IdealClientFilter from "./components/IdealClientFilter";
 import FAQ from "./components/FAQ";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
@@ -47,7 +48,12 @@ export default function App() {
             <Portfolio />
           </SectionTransition>
 
-          {/* Section 5: FAQ */}
+          {/* Section 5: Para Quem É x Para Quem Não É */}
+          <SectionTransition id="qualificacao" accentShape="square">
+            <IdealClientFilter />
+          </SectionTransition>
+
+          {/* Section 6: FAQ */}
           <SectionTransition id="faq" accentShape="ring">
             <FAQ />
           </SectionTransition>

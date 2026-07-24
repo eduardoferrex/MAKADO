@@ -12,7 +12,7 @@ export default function FAQ() {
     },
     {
       q: "Qual é o tempo de entrega para uma landing page ou site institucional?",
-      a: "Normalmente entregamos sites institucionais e landing pages de elite entre 7 a 15 dias úteis. Projetos mais complexos ou sistemas sob medida têm cronogramas personalizados dependendo dos requisitos, sempre alinhados de antemão e entregues rigorosamente no prazo."
+      a: "Normalmente entregamos sites institucionais e landing pages de elite com estrutura de vendas em até 10 a 15 dias úteis, com cronograma alinhado de antemão e entregas rigorosamente no prazo."
     },
     {
       q: "Eu mesmo vou conseguir alterar o conteúdo do meu site depois?",
@@ -23,8 +23,8 @@ export default function FAQ() {
       a: "Cuidamos de tudo! Nós configuramos seu domínio, e-mails corporativos profissionais, certificado de segurança SSL e hospedamos seu site em servidores cloud de alta performance. Você não precisa se preocupar com nenhuma burocracia técnica."
     },
     {
-      q: "Como o site da MAKADO ajuda na minha campanha de tráfego pago (Google/Meta)?",
-      a: "O tráfego pago atrai pessoas, mas o site decide se elas compram ou vão embora. Nossos sites carregam em milissegundos e têm copywriting focado em persuasão e conversão, o que diminui drasticamente o custo por lead (CPL) e multiplica o retorno sobre o investimento (ROI) da sua empresa."
+      q: "Como o site da MAKADO ajuda a converter mais visitantes em clientes?",
+      a: "Visitantes tomam decisões em segundos. Nossos sites carregam instantaneamente e utilizam copywriting focado em persuasão, quebra de objeções e chamadas diretas para ação. Isso transforma simples visitas em contatos e oportunidades reais de vendas."
     }
   ];
 

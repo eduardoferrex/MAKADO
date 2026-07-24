@@ -60,19 +60,19 @@ export default function About() {
           <div className="lg:col-span-7 space-y-8">
             <motion.div variants={itemVariants} className="space-y-4">
               <span className="text-xs font-bold font-mono tracking-[0.25em] text-zinc-500 uppercase block">
-                [ QUEM SOMOS ]
+                [ O DIAGNÓSTICO E O MÉTODO ]
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
-                Especialistas em transformar <span className="text-zinc-500 font-light italic">tecnologia</span> em <span className="border-b-2 border-white pb-1">credibilidade</span>.
+                Seu site atual é um <span className="text-zinc-500 font-light italic">custo estático</span> ou uma <span className="border-b-2 border-white pb-1">máquina de vendas</span>?
               </h2>
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-6 text-zinc-400 max-w-2xl text-base sm:text-lg leading-relaxed">
               <p>
-                A <strong>MAKADO</strong> é uma agência de tecnologia boutique dedicada à criação de sites, landing pages de altíssima conversão e sistemas inteligentes sob medida. Nós não fazemos sites genéricos em construtores visuais pesados; cada linha de código é esculpida para garantir velocidade inacreditável e design estonteante.
+                <strong>O Maior Erro do Mercado:</strong> A maioria das agências entrega "sites bonitinhos", mas completamente mudos sobre o seu negócio. O visitante entra, não entende a proposta de valor em 3 segundos, se confunde e fecha a aba. O resultado? Um cartão de visitas digital caro que não gera um único lead qualificado.
               </p>
               <p>
-                Acreditamos que a presença online é a vitrine mais valiosa do seu negócio. Por isso, aliamos design minimalista, UX avançada e estabilidade de nível empresarial para posicionar sua marca no topo do seu mercado.
+                A <strong>MAKADO</strong> nasceu para acabar com esse desperdício de tráfego. Desenvolvemos o <strong>Método Tração MAKADO®</strong>: uma metodologia proprietária que une psicologia de vendas B2B, copywriting perspicaz e engenharia de alta performance para converter visitantes frios em reuniões agendadas.
               </p>
             </motion.div>
 

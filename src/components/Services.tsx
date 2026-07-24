@@ -27,40 +27,40 @@ export default function Services() {
   const services = [
     {
       icon: <Monitor className="w-8 h-8 text-zinc-300" />,
-      title: "Websites",
-      subtitle: "Sites institucionais & Landing Pages",
-      description: "Desenvolvemos páginas extremamente rápidas e responsivas de alta performance focadas em converter visitantes em leads quentes. Nada de templates pesados: código limpo, visual espetacular e indexação perfeita no Google.",
+      title: "Sites Estratégicos",
+      subtitle: "Websites Institucionais & Landing Pages",
+      description: "Desenvolvemos páginas extremamente rápidas e de altíssimo padrão visual. Criamos estruturas limpas e focadas em transmitir autoridade instantânea para a sua marca.",
       features: [
         "Velocidade otimizada (Grade A no PageSpeed)",
-        "Copywriting persuasivo e moderno",
-        "Layout exclusivo responsivo",
-        "Formulários integrados ao WhatsApp/CRM",
+        "Layout autoral exclusivo sob medida",
+        "100% responsivo para dispositivos móveis",
+        "Indexação e estrutura técnica impecável",
+      ],
+      tag: "POSICIONAMENTO"
+    },
+    {
+      icon: <Cpu className="w-8 h-8 text-zinc-300" />,
+      title: "Estrutura de Vendas",
+      subtitle: "Copywriting & Engenharia de Conversão",
+      description: "Não entregamos apenas um layout vazio. Aplicamos uma estrutura completa de vendas dentro do seu site, com copywriting focado em conversão e gatilhos de decisão.",
+      features: [
+        "Copywriting persuasivo focado em B2B",
+        "Gargalos e quebras de objeção mapeados",
+        "Pontos de conversão diretos ao WhatsApp",
+        "Jornada intuitiva de tomada de decisão",
       ],
       tag: "CONVERSÃO"
     },
     {
-      icon: <Cpu className="w-8 h-8 text-zinc-300" />,
-      title: "Sistemas",
-      subtitle: "Sistemas sob medida & Automação",
-      description: "Sistemas web desenhados exatamente para a rotina da sua empresa. Reduza trabalhos manuais, integre APIs e centralize seus dados em painéis modernos de controle. Da ideia à implantação completa.",
-      features: [
-        "Banco de dados robusto e veloz",
-        "Painéis administrativos intuitivos",
-        "Segurança de nível de banco",
-        "APIs e integrações flexíveis",
-      ],
-      tag: "CONTROLE"
-    },
-    {
       icon: <Server className="w-8 h-8 text-zinc-300" />,
-      title: "Estruturas",
-      subtitle: "Infraestrutura digital & Domínios",
-      description: "Toda a espinha dorsal tecnológica que seu negócio precisa para crescer sem gargalos de infraestrutura. Configurações de servidores escaláveis, e-mails corporativos, segurança SSL e backups automáticos.",
+      title: "Infraestrutura & Suporte",
+      subtitle: "Servidores, Domínios & Segurança",
+      description: "Toda a espinha dorsal técnica que seu site precisa para funcionar sem interrupções. Hospedagem de alta velocidade, e-mails profissionais e suporte técnico contínuo.",
       features: [
-        "Cloud hosting otimizado",
-        "Contas de e-mail profissionais de elite",
-        "Configuração de Cloudflare & DNS ultra-veloz",
-        "Monitoramento 24/7 e backups diários",
+        "Hospedagem em nuvem de alta velocidade",
+        "Certificado de segurança SSL e Cloudflare",
+        "E-mails corporativos de alta entregabilidade",
+        "Suporte direto com os desenvolvedores",
       ],
       tag: "ESTABILIDADE"
     }
