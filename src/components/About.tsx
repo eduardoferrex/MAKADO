@@ -72,7 +72,7 @@ export default function About() {
                 <strong>O Maior Erro do Mercado:</strong> A maioria das agências entrega "sites bonitinhos", mas completamente mudos sobre o seu negócio. O visitante entra, não entende a proposta de valor em 3 segundos, se confunde e fecha a aba. O resultado? Um cartão de visitas digital caro que não gera um único lead qualificado.
               </p>
               <p>
-                A <strong>MAKADO</strong> nasceu para acabar com esse desperdício de tráfego. Desenvolvemos o <strong>Método Tração MAKADO®</strong>: uma metodologia proprietária que une psicologia de vendas B2B, copywriting perspicaz e engenharia de alta performance para converter visitantes frios em reuniões agendadas.
+                A <strong>MAKADO</strong> nasceu para acabar com esse desperdício de tráfego. Não entregamos apenas uma consultoria ou relatório: <strong>entregamos o seu site completo, totalmente desenvolvido e no ar</strong>, construído sob o <strong>Método Tração MAKADO®</strong> — integrando copywriting persuasivo, design autoral e engenharia de alta performance para converter visitantes frios em reuniões agendadas.
               </p>
             </motion.div>
 

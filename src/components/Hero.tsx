@@ -53,10 +53,10 @@ export default function Hero() {
           {/* Main Headline */}
           <motion.div variants={itemVariants} className="space-y-6 max-w-2xl">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-white leading-[1.08] font-display">
-              Transformamos o seu site em um <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-zinc-400 border-b border-zinc-700 pb-1">ativo de faturamento</span>.
+              Criamos o seu site para ser um <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-zinc-400 border-b border-zinc-700 pb-1">ativo de faturamento</span>.
             </h1>
             <p className="text-zinc-400 text-base sm:text-lg leading-relaxed font-sans">
-              A maioria das empresas perde mais de 90% dos visitantes porque seus sites são apenas "cartões de visita caros". Na <strong>MAKADO</strong>, criamos sites estratégicos e implantamos uma <strong>estrutura de vendas completa</strong> na sua página para converter tráfego em reuniões e clientes de alto valor.
+              Criamos e entregamos o seu <strong>site completo do zero</strong> — unindo design autoral, velocidade máxima e uma <strong>estrutura de vendas integrada</strong> para converter tráfego em reuniões e clientes reais para a sua empresa.
             </p>
           </motion.div>
 
@@ -73,10 +73,10 @@ export default function Hero() {
             </a>
 
             <a
-              href="#metodo"
+              href="#servicos"
               className="px-8 py-4 rounded-full bg-transparent border border-zinc-800 hover:border-zinc-600 text-zinc-300 hover:text-white text-sm font-semibold tracking-wide transition-all duration-300 flex items-center justify-center gap-2"
             >
-              <span>Conhecer o Método</span>
+              <span>Ver Projetos e Serviços</span>
             </a>
           </motion.div>
 
